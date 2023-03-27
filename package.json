@@ -1,7 +1,7 @@
 {
   "name": "df-portfolio",
   "version": "0.1.0",
-  "homepage": "https://Schnippen.github.io/df-portfolio",
+  "homepage": "https://schnippen.github.io/df-portfolio/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
