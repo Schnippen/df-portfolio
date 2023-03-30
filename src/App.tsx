@@ -13,7 +13,7 @@ function App() {
       <Navbar></Navbar>
       <body style={{ marginTop: "120px", backgroundColor: "f5f8fb" }}>
         <Block title={"Me"} childComponent={<Profile />}></Block>
-        <Block title={"Procjets"} childComponent={<Projects />}></Block>
+        <Block title={"Projects"} childComponent={<Projects />}></Block>
       </body>
       <Contact />
     </div>

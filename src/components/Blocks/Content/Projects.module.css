@@ -1,0 +1,37 @@
+.projects_container {
+  display: grid;
+  background-color: darkcyan;
+  grid-template-rows: repeat(3, 688px);
+  grid-template-columns: repeat(2, 50%);
+}
+
+.projects_item_1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  background-color: blue;
+}
+.projects_item_2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  background-color: rgb(67, 67, 192);
+}
+.projects_item_3 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background-color: rgb(59, 59, 124);
+}
+.projects_item_4 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  background-color: rgb(13, 75, 116);
+}
+.projects_item_5 {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  background-color: rgb(42, 173, 123);
+}
+.projects_item_6 {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  background-color: rgb(117, 143, 22);
+}

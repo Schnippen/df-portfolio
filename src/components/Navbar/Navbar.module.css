@@ -68,5 +68,15 @@
 }
 .logo:hover h2::first-letter {
   color: #b8a1e1;
+  transition: 1s ease-in-out;
+}
+.logo h2 > span {
+  transform: translateY(0%);
+  height: 50%;
+}
+.logo:hover h2 > span {
+  background-color: darkcyan;
+  transform: translateY(100%);
+  transition:  0.5s ease-in-out;
 }
 /*use :has(img   svg)  for logo?*/
