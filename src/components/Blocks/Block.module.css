@@ -1,0 +1,28 @@
+.block_container {
+  margin: 100px 200px;
+  width: 1440px;
+  background-color: rgba(0, 0, 0, 0);
+  height: 688px;
+  color: var(--primary-text-color);
+  display: grid;
+  grid-template-rows: 140px repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.block_title {
+  font-size: 160px;
+  font-weight: 800;
+  z-index: 10;
+  margin-left: 30px;
+  user-select: none;
+}
+
+.block_article {
+  background-color: var(--secondary-color);
+  grid-row: 2/4;
+  grid-column: 1/4;
+  padding: 40px;
+}
+
+/*zmień padding w article*/
+/*background-color: var(--tertiary-color);*/

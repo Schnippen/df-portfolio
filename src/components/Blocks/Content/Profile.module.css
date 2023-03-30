@@ -1,0 +1,20 @@
+.profile_container {
+  background-color: blueviolet;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+}
+
+.profile_description {
+  grid-column: 1/2;
+  background-color: aqua;
+  height: 100%;
+  width: 100%;
+}
+
+.profile_photo {
+  grid-column: 2/3;
+  background-color: brown;
+  height: 100%;
+  width: 100%;
+}

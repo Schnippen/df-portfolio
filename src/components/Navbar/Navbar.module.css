@@ -1,3 +1,72 @@
 .navbar {
-  background-color: red;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
 }
+
+.list {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.list li {
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  z-index: 1;
+}
+
+.overlay {
+  color: var(--primary-text-color);
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay::before {
+  background: #b8a1e1;
+  content: "";
+  inset: 0;
+  position: absolute;
+  opacity: 0;
+  transform: translate(2px, 2px);
+
+  transition: transform 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.overlay:hover::before {
+  opacity: 0.8;
+  transform: translate(14px, -8px);
+}
+
+.logo {
+  width: 140px;
+  cursor: pointer;
+  user-select: none;
+  transition: color 1s ease-in-out;
+}
+.logo h2:first-child {
+  text-align: left;
+}
+.logo h2:last-child {
+  text-align: right;
+}
+.logo h2::first-letter {
+  font-size: 120%;
+}
+.logo:hover h2::first-letter {
+  color: #b8a1e1;
+}
+/*use :has(img   svg)  for logo?*/
