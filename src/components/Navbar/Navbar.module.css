@@ -43,8 +43,8 @@
   position: absolute;
   opacity: 0;
   transform: translate(2px, 2px);
-
   transition: transform 0.4s ease-in-out;
+  transition-delay: 0.1s;
   z-index: -1;
 }
 

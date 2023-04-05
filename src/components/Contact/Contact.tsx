@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
+import Map from "../../assets/map";
 
 type ContactTypes = {
   myRef: React.MutableRefObject<HTMLElement | null>;
@@ -68,7 +69,9 @@ function Contact({ myRef }: ContactTypes) {
         </div>
         <button onClick={(e) => e.preventDefault()}> send</button>
       </form>
-      <div className={styles.contact_map}>mapa</div>
+      <div className={styles.contact_map}>
+    <Map/>
+      </div>
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Projects.module.css";
+import ReactIcon from "../../../assets/devicons";
 
 function Projects() {
   return (
@@ -13,6 +14,7 @@ function Projects() {
         <h2>opis projektu</h2>
 
         <button> czytaj wiecej</button>
+        <ReactIcon />
         <button>Live</button>
         {"child"}
       </div>
