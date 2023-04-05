@@ -6,11 +6,12 @@ import Block from "./components/Blocks/Block";
 import Contact from "./components/Contact/Contact";
 import Profile from "./components/Blocks/Content/Profile";
 import Projects from "./components/Blocks/Content/Projects";
-import { Ref } from "react";
 
 function App() {
   const meRef = useRef(null);
   const projectsRef = useRef(null);
+  const mediaRef = useRef(null);
+  const contactRef = useRef(null);
 
   const handleRef = (
     event: React.MouseEvent,
@@ -23,22 +24,27 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <body className="App">
       <Navbar
         meRef={meRef}
         projectsRef={projectsRef}
+        contactRef={contactRef}
         handleRef={handleRef}
       ></Navbar>
-      <body style={{ marginTop: "120px", backgroundColor: "f5f8fb" }}>
-        <Block myRef={meRef} title={"Me"} childComponent={<Profile />}></Block>
+      <main style={{ marginTop: "120px", backgroundColor: "f5f8fb" }}>
+        <Block
+          myRef={meRef}
+          title={"About Me"}
+          childComponent={<Profile />}
+        ></Block>
         <Block
           myRef={projectsRef}
           title={"Projects"}
           childComponent={<Projects />}
         ></Block>
-      </body>
-      <Contact />
-    </div>
+      </main>
+      <Contact myRef={contactRef} />
+    </body>
   );
 }
 

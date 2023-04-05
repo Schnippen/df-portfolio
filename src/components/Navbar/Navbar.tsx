@@ -8,9 +8,10 @@ type NavbarTypes = {
   ) => void;
   meRef: React.MutableRefObject<null>;
   projectsRef: React.MutableRefObject<null>;
+  contactRef: React.MutableRefObject<null>;
 };
 
-function Navbar({ handleRef, meRef, projectsRef }: NavbarTypes) {
+function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
   return (
     <nav className={styles.navbar}>
       <ul className={styles.list}>
@@ -22,16 +23,16 @@ function Navbar({ handleRef, meRef, projectsRef }: NavbarTypes) {
         </li>
         <div className={styles.logo}>
           <h2>
-            <span>D</span>amian
+            <span className={styles.slide}>D</span>amian
           </h2>
           <h2>
-            <span>F</span>ojcik
+            <span className={styles.slide}>F</span>ojcik
           </h2>
         </div>
         <li>
           <div className={styles.overlay}>Media link</div>
         </li>
-        <li>
+        <li onClick={(event) => handleRef(event, contactRef)}>
           <div className={styles.overlay}>Contact me</div>
         </li>
       </ul>
