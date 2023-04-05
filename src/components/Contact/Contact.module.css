@@ -52,9 +52,9 @@
   resize: none;
   width: 100%;
   height: 120px;
-  padding-left: 0.5em;
-  transition: padding-left 400ms ease-in-out;
-  background-color: antiquewhite;
+  padding-left: 80px;
+  padding-top: 10px;
+  background-color: #f5ebe0;
   border: 0;
   outline: 0;
 }
@@ -64,7 +64,7 @@
   left: 0.5em;
   top: 0%;
   transform: translateY(50%);
-  transition: top 400ms ease-in-out;
+  transition: top 400ms cubic-bezier(0.22, 1.16, 0.73, 0.98);
   cursor: pointer;
 }
 
@@ -80,6 +80,18 @@
   transition: width 1000ms cubic-bezier(0.22, 1.16, 0.73, 0.98);
 }
 .contact_form_input:focus-within .contact_form_input_span {
+  width: 76px;
+}
+
+.contact_form_textarea_span {
+  position: absolute;
+  height: 100%;
+  width: 0px;
+  background-color: #81a7d2;
+  transition: width 1000ms cubic-bezier(0.22, 1.16, 0.73, 0.98);
+}
+
+.contact_form_textarea:focus-within .contact_form_textarea_span {
   width: 76px;
 }
 

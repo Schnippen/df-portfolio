@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import styles from "./Contact.module.css";
 
 type ContactTypes = {
@@ -6,13 +6,15 @@ type ContactTypes = {
 };
 
 function Contact({ myRef }: ContactTypes) {
-  const [form,setForm]=useState({
-    email:"",
-    subject:"",
-    message:"",
-  })
+  const [form, setForm] = useState({
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({
       ...form,
       [(e.target as HTMLInputElement).name]: (e.target as HTMLInputElement)
@@ -40,7 +42,12 @@ function Contact({ myRef }: ContactTypes) {
           </div>
           <div className={styles.contact_form_input}>
             <span className={styles.contact_form_input_span}></span>
-            <input type="text" id="subject" name="subject" />
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              onChange={handleChange}
+            />
             <label
               className={styles.contact_form_input_label}
               htmlFor="subject"
@@ -49,7 +56,8 @@ function Contact({ myRef }: ContactTypes) {
             </label>
           </div>
           <div className={styles.contact_form_textarea}>
-            <textarea id="message" name="message" />
+            <span className={styles.contact_form_textarea_span}></span>
+            <textarea id="message" name="message" onChange={handleChange} />
             <label
               className={styles.contact_form_textarea_label}
               htmlFor="message"
@@ -58,6 +66,7 @@ function Contact({ myRef }: ContactTypes) {
             </label>
           </div>
         </div>
+        <button onClick={(e) => e.preventDefault()}> send</button>
       </form>
       <div className={styles.contact_map}>mapa</div>
     </section>

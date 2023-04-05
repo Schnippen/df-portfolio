@@ -7,6 +7,7 @@
   display: grid;
   grid-template-rows: 140px repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
+  animation: block-load 1200ms ease-in;
 }
 
 .block_title {
@@ -26,5 +27,13 @@
   padding: 40px;
 }
 
+@keyframes block-load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*zmień padding w article*/
 /*background-color: var(--tertiary-color);*/

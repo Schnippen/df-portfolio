@@ -8,6 +8,7 @@
   height: 120px;
   display: flex;
   align-items: center;
+  animation: navbar-load 800ms ease-in;
 }
 
 .list {
@@ -24,6 +25,7 @@
   user-select: none;
   position: relative;
   z-index: 1;
+  animation: fade-in 1200ms ease-in;
 }
 
 .overlay {
@@ -46,7 +48,7 @@
   z-index: -1;
 }
 
-.overlay:hover::before, 
+.overlay:hover::before,
 .overlay:focus::before {
   opacity: 0.8;
   transform: translate(14px, -8px);
@@ -94,3 +96,22 @@
   z-index: -1;
 }
 /*use :has(img   svg)  for logo?*/
+@keyframes navbar-load {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

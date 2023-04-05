@@ -31,7 +31,7 @@ function App() {
         contactRef={contactRef}
         handleRef={handleRef}
       ></Navbar>
-      <main style={{ marginTop: "120px", backgroundColor: "f5f8fb" }}>
+      <main style={{ paddingTop: "120px", backgroundColor: "f5f8fb" }}>
         <Block
           myRef={meRef}
           title={"About Me"}

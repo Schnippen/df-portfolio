@@ -1,4 +1,4 @@
-import React, { ReactNode,forwardRef } from "react";
+import React, { ReactNode } from "react";
 import styles from "./Block.module.css";
 
 type BlockTypes = {
