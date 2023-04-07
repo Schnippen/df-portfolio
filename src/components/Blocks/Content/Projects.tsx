@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Projects.module.css";
-import ReactIcon from "../../../assets/devicons";
+import DevIcons from "../../../assets/DevIcons";
 
 function Projects() {
   return (
@@ -9,12 +9,15 @@ function Projects() {
         1{"child"}
         <h2>nazwa projektu</h2>
         <div>zdjecie</div>
+        <p>krótki opis</p>
       </div>
       <div className={styles.projects_item_2}>
         <h2>opis projektu</h2>
 
         <button> czytaj wiecej</button>
-        <ReactIcon />
+        <div className={styles.icon}>
+          <DevIcons.ReactIcon />
+        </div>
         <button>Live</button>
         {"child"}
       </div>
