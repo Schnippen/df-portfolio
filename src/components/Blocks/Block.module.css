@@ -13,6 +13,7 @@
 .block_title {
   font-size: 160px;
   font-weight: 800;
+  height: 180px;
   z-index: 10;
   margin-left: 30px;
   user-select: none;
@@ -37,6 +38,5 @@
 }
 /*zmień padding w article*/
 /*background-color: var(--tertiary-color);*/
-@media(max-width: 1250px) {
-  
+@media (max-width: 1250px) {
 }

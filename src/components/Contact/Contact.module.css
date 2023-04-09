@@ -9,6 +9,7 @@
 .contact_form {
   grid-column: 1/2;
   background-color: aqua;
+  height:688px;
 }
 
 .contact_form_container {
