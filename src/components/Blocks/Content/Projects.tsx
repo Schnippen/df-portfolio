@@ -10,7 +10,12 @@ function Projects() {
       <div className={styles.projects_item_1}>
         1{"child"}
         <h2>Anytown Real Estate</h2>
-        <div>zdjecie</div>
+        <div className={styles.image_container}>
+          <img
+            src="https://picsum.photos/500/500?random=2"
+            className={styles.image}
+          ></img>
+        </div>
         <p>krótki opis</p>
       </div>
       <div className={styles.projects_item_2}>
