@@ -14,7 +14,7 @@ function Projects() {
         <p>krótki opis</p>
       </div>
       <div className={styles.projects_item_2}>
-        <h2 className={styles.projects_item_title}>title</h2>
+        <h2 className={styles.projects_item_title}>Anytown Real Estate</h2>
         <div className={styles.projects_item_description}>
           <DescriptionAnytownRealEstate />
         </div>
