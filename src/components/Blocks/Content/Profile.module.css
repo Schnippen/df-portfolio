@@ -56,4 +56,11 @@
   height: 100%;
   width: 100%;
 }
+.link {
+  color: white;
+}
+
+.link:visited {
+  color: white;
+}
 /*box-shadow: 0 5px 15px 0 rgba(90,50,40,.15), 0 4px 8px 0 rgba(80,40,30,.1);*/

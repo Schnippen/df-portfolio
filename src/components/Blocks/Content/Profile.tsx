@@ -15,8 +15,16 @@ function Profile() {
     <div className={styles.profile_container}>
       <article className={styles.profile_description}>
         Profile <div>who am i?</div>
-        <BsGithub className={styles.icon} />
-        <BsLinkedin className={styles.icon} />
+        <a
+          href="https://github.com/Schnippen"
+          target="new"
+          className={styles.link}
+        >
+          <BsGithub className={styles.icon} />
+        </a>
+        <a href="*" target="new" className={styles.link}>
+          <BsLinkedin className={styles.icon} />
+        </a>
       </article>
       <article className={styles.profile_photo}>
         <img src="https://picsum.photos/500/500?random=1" alt="Profile_Photo" />
