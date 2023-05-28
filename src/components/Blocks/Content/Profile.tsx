@@ -5,10 +5,30 @@ import ProfileCharacter from "./ProfileCharacter";
 import DevIcons from "../../../assets/DevIcons";
 function Profile() {
   const ProfileDataSVGs = [
-    { image: <DevIcons.Independence />, text: "Niezależność opinii" },
-    { image: <DevIcons.Honesty />, text: "Szczerość" },
-    { image: <DevIcons.Talkative />, text: "Soft skills" },
-    { image: <DevIcons.AnaliticalThinking />, text: "Analityczne myślenie" },
+    {
+      image: <DevIcons.Independence />,
+      text:
+        "People value my ability to think independently and form my own opinions.",
+      title: "Independence of opinion",
+    },
+    {
+      image: <DevIcons.Honesty />,
+      text:
+        "My commitment to being honest and transparent is highly regarded by others.",
+      title: "Honesty",
+    },
+    {
+      image: <DevIcons.Talkative />,
+      text:
+        "I am recognized for my strong interpersonal skills and ability to communicate effectively.",
+      title: "Soft skills",
+    },
+    {
+      image: <DevIcons.AnaliticalThinking />,
+      text:
+        "Others appreciate my capacity for analytical thinking and problem-solving.",
+      title: "Analytical thinking",
+    },
   ];
 
   return (
@@ -31,7 +51,7 @@ function Profile() {
       </article>
       <article className={styles.profile_character}>
         <h2 className={styles.profile_character_title}>
-          Co doceniają we mnie inni ludzie?
+          What do other people appreciate about me?
         </h2>
 
         {ProfileDataSVGs.map((item, index) => ProfileCharacter(item))}

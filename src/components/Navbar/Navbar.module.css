@@ -133,6 +133,9 @@ a {
     transform: translateY(0);
   }
 }
+.sidebar {
+  display: none;
+}
 
 @keyframes fade-in {
   0% {
@@ -140,5 +143,37 @@ a {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    background-color: burlywood;
+  }
+  .sidebar {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 400px;
+    background-color: red;
+    z-index: 9999;
+  }
+  .sidebarClosed {
+    display: none;
+  }
+  .list {
+    display: none;
+  }
+
+  .Hamburger {
+  }
+
+  .Hamburger > div {
+    transition: all 1s linear;
+    height: 5px;
+    width: 30px;
+    margin: 5px 0;
+    transform-origin: 1px;
+    background-color: pink;
   }
 }

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import Projects from "../Blocks/Content/Projects";
+import Sidebar from "./Sidebar";
 type NavbarTypes = {
   handleRef: (
     event: React.MouseEvent,
@@ -12,31 +13,72 @@ type NavbarTypes = {
 };
 
 function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
-  return (
-    <nav className={styles.navbar}>
-      <ul className={styles.list}>
-        <li onClick={(event) => handleRef(event, meRef)}>
-          <div className={styles.overlay}>About me</div>
-        </li>
-        <li onClick={(event) => handleRef(event, projectsRef)}>
-          <div className={styles.overlay}>Projects</div>
-        </li>
-        <div className={styles.logo}>
-          <h2>
-            <span className={styles.slide}>D</span>amian
-          </h2>
-          <h2>
-            <span className={styles.slide}>F</span>ojcik
-          </h2>
+  const [isOpened, setIsOpened] = useState<boolean>(false);
+
+  const Logo = () => {
+    return (
+      <div className={styles.logo}>
+        <h2>
+          <span className={styles.slide}>D</span>amian
+        </h2>
+        <h2>
+          <span className={styles.slide}>F</span>ojcik
+        </h2>
+      </div>
+    );
+  };
+  const Hamburger = () => {
+    return (
+      <>
+        <div
+          onClick={() => setIsOpened(!isOpened)}
+          className={styles.Hamburger}
+        >
+          <div
+            style={{ transform: isOpened ? "rotate(45deg)" : "rotate(0)" }}
+          ></div>
+          <div
+            style={{
+              opacity: isOpened ? "0" : "1",
+              transform: isOpened ? "translateX(20px)" : "translateX(0)",
+            }}
+          ></div>
+          <div
+            style={{ transform: isOpened ? "rotate(-45deg)" : "rotate(0)" }}
+          ></div>
         </div>
-        <li>
-          <div className={styles.overlay}>Media link</div>
-        </li>
-        <li onClick={(event) => handleRef(event, contactRef)}>
-          <div className={styles.overlay}>Contact me</div>
-        </li>
-      </ul>
-    </nav>
+      </>
+    );
+  };
+  return (
+    <>
+      <Sidebar
+        isOpened={isOpened}
+        setIsOpened={setIsOpened}
+        handleRef={handleRef}
+        meRef={meRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
+      />
+      <nav className={styles.navbar}>
+        <Hamburger></Hamburger>
+        <ul className={styles.list}>
+          <li onClick={(event) => handleRef(event, meRef)}>
+            <div className={styles.overlay}>About me</div>
+          </li>
+          <li onClick={(event) => handleRef(event, projectsRef)}>
+            <div className={styles.overlay}>Projects</div>
+          </li>
+          <Logo />
+          <li>
+            <div className={styles.overlay}>Media link</div>
+          </li>
+          <li onClick={(event) => handleRef(event, contactRef)}>
+            <div className={styles.overlay}>Contact me</div>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
 
