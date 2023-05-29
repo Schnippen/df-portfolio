@@ -32,6 +32,14 @@ function App() {
         handleRef={handleRef}
       ></Navbar>
       <main style={{ paddingTop: "120px", backgroundColor: "f5f8fb" }}>
+        <div
+          style={{
+            display: "block",
+            height: "300px",
+            width: "100%",
+            backgroundColor: "beige",
+          }}
+        ></div>
         <Block
           myRef={meRef}
           title={"About Me"}

@@ -47,18 +47,27 @@ function Sidebar({
 
   return (
     <aside
-      className={isOpened ? styles.sidebar : styles.sidebarClosed}
+      className={styles.sidebar}
       ref={sidebarRef}
+      style={{ left: isOpened ? "0" : "-100%" }}
     >
-      sda
-      <ul>
-        <li onClick={(event) => handleRef(event, meRef)}>ME</li>
-        <li onClick={(event) => handleRef(event, projectsRef)}>Projects</li>
-        <li>Media</li>
-        <li onClick={(event) => handleRef(event, contactRef)}>Contact</li>
+      <ul className={styles.sidebar_list}>
+        <li onClick={(event) => handleRef(event, meRef)}>
+          <div className={styles.overlay}>About Me</div>
+        </li>
+        <li onClick={(event) => handleRef(event, projectsRef)}>
+          <div className={styles.overlay}>Projects</div>
+        </li>
+        <li>
+          <div className={styles.overlay}>Media</div>
+        </li>
+        <li onClick={(event) => handleRef(event, contactRef)}>
+          <div className={styles.overlay}>Contact me</div>
+        </li>
       </ul>
     </aside>
   );
 }
 
 export default Sidebar;
+//border-bottom: 1px solid black;

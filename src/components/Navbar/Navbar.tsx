@@ -27,9 +27,18 @@ function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
       </div>
     );
   };
-  const Hamburger = () => {
-    return (
-      <>
+
+  return (
+    <>
+      <Sidebar
+        isOpened={isOpened}
+        setIsOpened={setIsOpened}
+        handleRef={handleRef}
+        meRef={meRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
+      />
+      <nav className={styles.navbar}>
         <div
           onClick={() => setIsOpened(!isOpened)}
           className={styles.Hamburger}
@@ -47,21 +56,6 @@ function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
             style={{ transform: isOpened ? "rotate(-45deg)" : "rotate(0)" }}
           ></div>
         </div>
-      </>
-    );
-  };
-  return (
-    <>
-      <Sidebar
-        isOpened={isOpened}
-        setIsOpened={setIsOpened}
-        handleRef={handleRef}
-        meRef={meRef}
-        projectsRef={projectsRef}
-        contactRef={contactRef}
-      />
-      <nav className={styles.navbar}>
-        <Hamburger></Hamburger>
         <ul className={styles.list}>
           <li onClick={(event) => handleRef(event, meRef)}>
             <div className={styles.overlay}>About me</div>
