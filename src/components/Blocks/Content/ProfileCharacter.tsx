@@ -14,6 +14,7 @@ const ProfileCharacter = ({ image, text, title }: ProfileCharacterTypes) => {
         flexDirection: "column",
         alignItems: "center",
         cursor: "pointer",
+        width: "276",
       }}
     >
       {image}
@@ -29,7 +30,10 @@ const ProfileCharacter = ({ image, text, title }: ProfileCharacterTypes) => {
       <p
         style={{
           textAlign: "center",
-          fontSize: "0.8em",
+          fontSize: "0.7em",
+          width: "250px",
+          padding: "12px",
+          userSelect: "none",
         }}
       >
         {text}

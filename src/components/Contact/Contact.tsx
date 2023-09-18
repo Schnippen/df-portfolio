@@ -4,9 +4,10 @@ import Map from "../../assets/map";
 
 type ContactTypes = {
   myRef: React.MutableRefObject<HTMLElement | null>;
+  id: string;
 };
 
-function Contact({ myRef }: ContactTypes) {
+function Contact({ myRef, id }: ContactTypes) {
   const [form, setForm] = useState({
     email: "",
     subject: "",
@@ -25,7 +26,7 @@ function Contact({ myRef }: ContactTypes) {
   };
 
   return (
-    <section className={styles.contact_container} ref={myRef}>
+    <section className={styles.contact_container} ref={myRef} id={id}>
       <h2>Contact</h2>
       <form action="" className={styles.contact_form}>
         <div className={styles.contact_form_container}>
@@ -70,7 +71,7 @@ function Contact({ myRef }: ContactTypes) {
         <button onClick={(e) => e.preventDefault()}> send</button>
       </form>
       <div className={styles.contact_map}>
-    <Map/>
+        <Map />
       </div>
     </section>
   );

@@ -25,8 +25,6 @@ function Sidebar({
 
   useEffect(() => {
     const handleClose = (e: MouseEvent) => {
-      console.log(e.target);
-      console.log(sidebarRef.current);
       if (isOpened && sidebarRef.current !== e.target) {
         setIsOpened(!isOpened);
       }

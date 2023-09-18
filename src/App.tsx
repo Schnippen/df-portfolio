@@ -1,28 +1,45 @@
-import logo from "./logo.svg";
-import React, { useRef } from "react";
+//import logo from "./logo.svg";
+import React, { useRef, useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Block from "./components/Blocks/Block";
-import Contact from "./components/Contact/Contact";
-import Profile from "./components/Blocks/Content/Profile";
-import Projects from "./components/Blocks/Content/Projects";
+import Main from "./pages/Main";
+import ProjectPage from "./pages/ProjectPage";
+import { Route, Routes } from "react-router";
+
+import { useNavigate, useLocation } from "react-router-dom";
 
 function App() {
   const meRef = useRef(null);
   const projectsRef = useRef(null);
   const mediaRef = useRef(null);
   const contactRef = useRef(null);
+  const [locationState, setLocationState] = useState("");
+  const navigate = useNavigate();
 
   const handleRef = (
     event: React.MouseEvent,
-    ref: React.MutableRefObject<HTMLElement | null>
+    ref: React.MutableRefObject<HTMLElement | null>,
+    path?: string | null
   ) => {
+    console.log("click");
     event.preventDefault();
+    if (path) {
+      navigate(path);
+    }
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
+  /*   const location = useLocation();
+
+  useEffect(() => {
+    console.log(location);
+    console.log("Navigated to:", location.pathname);
+    setLocationState(location.pathname);
+  }, [location]);
+ */
+  //navigate();
   return (
     <body className="App">
       <Navbar
@@ -31,27 +48,13 @@ function App() {
         contactRef={contactRef}
         handleRef={handleRef}
       ></Navbar>
-      <main style={{ paddingTop: "120px", backgroundColor: "f5f8fb" }}>
-        <div
-          style={{
-            display: "block",
-            height: "300px",
-            width: "100%",
-            backgroundColor: "beige",
-          }}
-        ></div>
-        <Block
-          myRef={meRef}
-          title={"About Me"}
-          childComponent={<Profile />}
-        ></Block>
-        <Block
-          myRef={projectsRef}
-          title={"Projects"}
-          childComponent={<Projects />}
-        ></Block>
-      </main>
-      <Contact myRef={contactRef} />
+
+      <Main
+        meRef={meRef}
+        projectsRef={projectsRef}
+        mediaRef={mediaRef}
+        contactRef={contactRef}
+      />
     </body>
   );
 }

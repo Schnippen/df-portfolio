@@ -2,9 +2,9 @@ import React, { ReactNode } from "react";
 import styles from "./Block.module.css";
 
 type BlockTypes = {
-  title: string;
-  childComponent: ReactNode;
-  myRef: React.MutableRefObject<HTMLElement | null>;
+  title?: string;
+  childComponent?: ReactNode;
+  myRef?: React.MutableRefObject<HTMLElement | null>;
 };
 
 function Block({ myRef, title, childComponent }: BlockTypes) {

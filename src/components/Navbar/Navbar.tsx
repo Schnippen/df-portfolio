@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import Projects from "../Blocks/Content/Projects";
+
 import Sidebar from "./Sidebar";
+import { Link } from "react-router-dom";
+
 type NavbarTypes = {
   handleRef: (
     event: React.MouseEvent,
-    ref: React.MutableRefObject<HTMLElement | null>
+    ref: React.MutableRefObject<HTMLElement | null>,
+    path?: string | null
   ) => void;
   meRef: React.MutableRefObject<null>;
   projectsRef: React.MutableRefObject<null>;
@@ -63,13 +66,17 @@ function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
           <li onClick={(event) => handleRef(event, projectsRef)}>
             <div className={styles.overlay}>Projects</div>
           </li>
-          <Logo />
+          <Link to={"/Home"}>
+            <Logo />
+          </Link>
           <li>
             <div className={styles.overlay}>Media link</div>
           </li>
-          <li onClick={(event) => handleRef(event, contactRef)}>
-            <div className={styles.overlay}>Contact me</div>
-          </li>
+          <Link to={"/Home"}>
+            <li >
+              <div className={styles.overlay}>Contact me</div>
+            </li>
+          </Link>
         </ul>
       </nav>
     </>
