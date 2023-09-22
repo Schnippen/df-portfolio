@@ -3,7 +3,6 @@ import React, { useRef, useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Main from "./pages/Main";
-import ProjectPage from "./pages/ProjectPage";
 import { Route, Routes } from "react-router";
 
 import { useNavigate, useLocation } from "react-router-dom";

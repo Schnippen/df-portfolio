@@ -10,6 +10,11 @@
   grid-column: 1/2;
   background-color: aqua;
   height: 688px;
+  font-size: 1.1rem;
+  min-height: 100px;
+  line-height: 1.4;
+  font-family: Montserrat;
+  margin: 16px 0;
 }
 
 .contact_form_container {

@@ -1,0 +1,98 @@
+.control_panel_container {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+.control_panel_button {
+  min-height: 25px;
+  min-width: 25px;
+  width: 50px;
+  height: 50px;
+  margin: 0 4px;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.control_panel_button:hover,
+.control_panel_button:hover > svg {
+  color: #ffffff;
+  opacity: 1;
+  -webkit-filter: drop-shadow(0px 0px 15px #222);
+  filter: drop-shadow(0px 0px 15px #222);
+  transition: color 0.3s ease-in-out;
+}
+.control_panel_button:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.fullscreen_container {
+  background-color: rgba(39, 39, 39, 0.651);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: none;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in 800ms ease-in-out;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fullscreen_wrapper {
+  min-height: 200px;
+  min-width: 200px;
+  height: 96%;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  user-select: none;
+}
+.control_panel_container_fullscreen {
+  z-index: 1000;
+  display: flex;
+}
+
+.fullscreen_image {
+  position: absolute;
+  object-fit: contain;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 3rem 0;
+  min-height: 200px;
+  min-width: 200px;
+  max-width: 100%;
+  max-height: 80%;
+  -webkit-filter: drop-shadow(0px 0px 15px #222);
+  filter: drop-shadow(0px 0px 15px #222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index_display {
+  font-size: 1.1rem;
+  min-height: 100px;
+  line-height: 1.4;
+  font-family: Montserrat;
+  margin: 16px 0;
+  color: aliceblue;
+}

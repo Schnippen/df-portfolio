@@ -73,7 +73,7 @@ function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
             <div className={styles.overlay}>Media link</div>
           </li>
           <Link to={"/Home"}>
-            <li >
+            <li onClick={(event) => handleRef(event, contactRef)}>
               <div className={styles.overlay}>Contact me</div>
             </li>
           </Link>
