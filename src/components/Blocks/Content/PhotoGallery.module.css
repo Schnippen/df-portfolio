@@ -15,6 +15,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  cursor: pointer;
 }
 .control_panel_button:hover,
 .control_panel_button:hover > svg {
@@ -55,14 +58,16 @@
 
 .fullscreen_wrapper {
   min-height: 200px;
-  min-width: 200px;
+
   height: 96%;
-  width: 100vw;
+  min-width: 50%;
+  max-width: 80%;
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
   user-select: none;
+  background-color: red;
 }
 .control_panel_container_fullscreen {
   z-index: 1000;

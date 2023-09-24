@@ -66,17 +66,15 @@ function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
           <li onClick={(event) => handleRef(event, projectsRef)}>
             <div className={styles.overlay}>Projects</div>
           </li>
-          <Link to={"/Home"}>
-            <Logo />
-          </Link>
+          <Logo />
+
           <li>
             <div className={styles.overlay}>Media link</div>
           </li>
-          <Link to={"/Home"}>
-            <li onClick={(event) => handleRef(event, contactRef)}>
-              <div className={styles.overlay}>Contact me</div>
-            </li>
-          </Link>
+
+          <li onClick={(event) => handleRef(event, contactRef)}>
+            <div className={styles.overlay}>Contact me</div>
+          </li>
         </ul>
       </nav>
     </>

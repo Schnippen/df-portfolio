@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Profile.module.css";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
 import DevIcons from "../../../assets/DevIcons";
 import ProfilePicture from "../../../assets/images/profile_picture.png";
+import MediaButton from "../../Buttons/MediaButton";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 function Profile() {
-  
   const ProfileDataSVGs = [
     {
       image: <DevIcons.Independence />,
@@ -31,16 +31,12 @@ function Profile() {
   const MediaContainer = () => {
     return (
       <div className={styles.media_container}>
-        <a
-          href="https://github.com/Schnippen"
-          target="new"
-          className={styles.link}
-        >
-          <BsGithub className={styles.icon} />
-        </a>
-        <a href="*" target="new" className={styles.link}>
-          <BsLinkedin className={styles.icon} />
-        </a>
+        <MediaButton
+          link="https://github.com/Schnippen"
+          Icon={BsGithub}
+          tooltip="Github"
+        />
+        <MediaButton link="_blank" Icon={BsLinkedin} tooltip="linkedin" />
       </div>
     );
   };

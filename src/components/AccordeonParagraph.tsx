@@ -11,13 +11,14 @@ const AccordeonParagraph = ({
   title: string;
 }) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
-
-  const { size, ...rest } = useSpring({
+  //height prop
+  const { size, opacity, ...rest } = useSpring({
     config: config.slow,
-    from: { size: "0px", background: "hotpink" },
+    from: { size: "0px", background: "hotpink", opacity: 0 },
     to: {
       size: isOpened ? "160px" : "0px",
       background: isOpened ? "white" : "blue",
+      opacity: isOpened ? 1 : 0,
     },
   });
 
@@ -25,19 +26,21 @@ const AccordeonParagraph = ({
     from: { x: 0 },
     to: { x: isOpened ? -180 : 0 },
   });
-  //style={{ transform: to(rotation.x, value => `rotateZ(${value}deg)`) }}
   return (
     <li className={styles.accordeon}>
-      <div className={styles.accordeon_title_container}>
+      <div
+        className={styles.accordeon_title_container}
+        onClick={() => {
+          setIsOpened(!isOpened);
+          console.log("isOpened:", isOpened);
+        }}
+      >
         <h4 className={styles.accordeon_title}>{title}</h4>
         <animated.div
           style={{
             transform: rotation.x.to((value) => `rotate(${value}deg)`),
             cursor: "pointer",
-          }}
-          onClick={() => {
-            setIsOpened(!isOpened);
-            console.log("isOpened:", isOpened);
+            userSelect: "none",
           }}
           className={styles.svg}
         >
@@ -55,7 +58,12 @@ const AccordeonParagraph = ({
         }}
       >
         {isOpened ? (
-          <p className={styles.project_paragraph}>{paragraphText}</p>
+          <animated.p
+            style={{ opacity: opacity }}
+            className={styles.project_paragraph}
+          >
+            {paragraphText}
+          </animated.p>
         ) : null}
       </animated.div>
     </li>

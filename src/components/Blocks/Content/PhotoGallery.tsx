@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./Projects.module.css";
 import PhotoGalleryStyles from "./PhotoGallery.module.css";
 import { HiOutlinePlayPause } from "react-icons/hi2";
@@ -8,8 +8,6 @@ import {
 } from "react-icons/io5";
 import { BsArrowsFullscreen } from "react-icons/bs";
 import { IconType } from "react-icons";
-
-//BsArrowsFullscreen
 
 const PhotoGallery = ({
   photos,
@@ -44,8 +42,6 @@ const PhotoGallery = ({
   }, [photos.length, delay, isPaused]);
 
   useEffect(() => {
-    console.log("render");
-
     setTimeout(() => {
       setIsFadingOut(false);
     }, 500);
@@ -95,6 +91,47 @@ const PhotoGallery = ({
     };
   }, [isFullScreen]);
 
+  //close fullscreen on click
+  useEffect(() => {
+    const handleClose = (e: MouseEvent) => {
+      if (isFullScreen && ref.current === e.target) {
+        setIsFullScreen(!isFullScreen);
+      }
+    };
+    if (isFullScreen) {
+      document.addEventListener("click", handleClose);
+    }
+    return () => {
+      document.removeEventListener("click", handleClose);
+    };
+  }, [isFullScreen]);
+
+  //fullscreen photogallery controls
+  const ref = useRef(null);
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      e.preventDefault();
+      if (e.key === "ArrowRight" || e.key === "ArrowUp") {
+        handleNext();
+      }
+      if (e.key === "ArrowLeft" || e.key === "ArrowDown") {
+        handlePrevious();
+      }
+      if (e.key === " " || e.code === "Space") {
+        handlePause();
+      }
+      if (e.key === "Escape" || e.key === "Backspace") {
+        handleFullscreen();
+      }
+    };
+    if (isFullScreen) {
+      document.addEventListener("keydown", handleKeyPress);
+      return () => {
+        document.removeEventListener("keydown", handleKeyPress);
+      };
+    }
+  }, [isFullScreen]);
+
   const ControlPanelButton = ({
     Icon,
     handler,
@@ -109,6 +146,7 @@ const PhotoGallery = ({
     );
   };
 
+  //buttons
   const ControlPanel = () => {
     return (
       <ul
@@ -138,7 +176,7 @@ const PhotoGallery = ({
   return (
     <div className={styles.PhotoGallery}>
       {isFullScreen ? (
-        <div className={PhotoGalleryStyles.fullscreen_container}>
+        <div className={PhotoGalleryStyles.fullscreen_container} ref={ref}>
           <figure className={PhotoGalleryStyles.fullscreen_wrapper}>
             <img
               src={photos[currentPhotoIndex]}
@@ -156,7 +194,7 @@ const PhotoGallery = ({
         <>
           <img
             src={photos[currentPhotoIndex]}
-            alt="Screenshot of Tarot Reader App"
+            alt={alt}
             style={currentPhotoStyle}
             className={styles.project_image}
           />

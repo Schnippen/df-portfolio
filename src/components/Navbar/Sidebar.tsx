@@ -51,16 +51,16 @@ function Sidebar({
     >
       <ul className={styles.sidebar_list}>
         <li onClick={(event) => handleRef(event, meRef)}>
-          <div className={styles.overlay}>About Me</div>
+          <p className={styles.overlay}>About Me</p>
         </li>
         <li onClick={(event) => handleRef(event, projectsRef)}>
-          <div className={styles.overlay}>Projects</div>
+          <p className={styles.overlay}>Projects</p>
         </li>
         <li>
-          <div className={styles.overlay}>Media</div>
+          <p className={styles.overlay}>Media</p>
         </li>
         <li onClick={(event) => handleRef(event, contactRef)}>
-          <div className={styles.overlay}>Contact me</div>
+          <p className={styles.overlay}>Contact me</p>
         </li>
       </ul>
     </aside>

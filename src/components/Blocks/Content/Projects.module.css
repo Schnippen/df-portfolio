@@ -75,6 +75,14 @@
   width: 100%;
   background-color: slateblue;
 }
+.projects_article_links {
+  min-height: 50px;
+  height: 100px;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .link {
   color: #2d2d2d;
