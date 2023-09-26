@@ -5,28 +5,6 @@ import ProfilePicture from "../../../assets/images/profile_picture.png";
 import MediaButton from "../../Buttons/MediaButton";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 function Profile() {
-  const ProfileDataSVGs = [
-    {
-      image: <DevIcons.Independence />,
-      text: "People value my ability to think independently and form my own opinions.",
-      title: "Independence of opinion",
-    },
-    {
-      image: <DevIcons.Honesty />,
-      text: "My commitment to being honest and transparent is highly regarded by others.",
-      title: "Honesty",
-    },
-    {
-      image: <DevIcons.Talkative />,
-      text: "I am recognized for my strong interpersonal skills and ability to communicate effectively.",
-      title: "Soft skills",
-    },
-    {
-      image: <DevIcons.AnaliticalThinking />,
-      text: "Others appreciate my capacity for analytical thinking and problem-solving.",
-      title: "Analytical thinking",
-    },
-  ];
 
   const MediaContainer = () => {
     return (
@@ -72,7 +50,7 @@ function Profile() {
             I eagerly anticipate the opportunity to share my journey and
             portfolio with you, showcasing how my unwavering passion for real
             estate and technology aligns seamlessly with my dedication to
-            resolving complex issues and delivering elegant solutions."
+            resolving complex issues and delivering elegant solutions.
           </p>
         </div>
         <section className={styles.profile_picture_container}>
@@ -89,36 +67,4 @@ function Profile() {
 }
 
 export default Profile;
-/*[
-    <DevIcons.Independence />,
-    <DevIcons.Imagination />,
-    <DevIcons.Talkative />,
-    <DevIcons.Creativity />,
-  ];*/
-/*
-      <article className={styles.profile_item}>
-        <p className={styles.profile_paragraph}>{ArticleItemData.part3}</p>
-      </article>
-<article className={styles.profile_description}>
-        Profile <div>who am i?</div>
-        <a
-          href="https://github.com/Schnippen"
-          target="new"
-          className={styles.link}
-        >
-          <BsGithub className={styles.icon} />
-        </a>
-        <a href="*" target="new" className={styles.link}>
-          <BsLinkedin className={styles.icon} />
-        </a>
-      </article>
-      <article className={styles.profile_photo}>
-        <img src="https://picsum.photos/500/500?random=1" alt="Profile_Photo" />
-      </article>
-      <article className={styles.profile_character}>
-        <h2 className={styles.profile_character_title}>
-          What do other people appreciate about me?
-        </h2>
 
-        {ProfileDataSVGs.map((item, index) => ProfileCharacter(item))}
-      </article>*/
