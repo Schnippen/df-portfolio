@@ -135,12 +135,18 @@ const PhotoGallery = ({
   const ControlPanelButton = ({
     Icon,
     handler,
+    tooltip,
   }: {
     Icon: IconType;
     handler: () => void;
+    tooltip?: string;
   }) => {
     return (
-      <li className={PhotoGalleryStyles.control_panel_button} onClick={handler}>
+      <li
+        className={PhotoGalleryStyles.control_panel_button}
+        onClick={handler}
+        title={tooltip}
+      >
         <Icon />
       </li>
     );
@@ -159,26 +165,34 @@ const PhotoGallery = ({
         <ControlPanelButton
           Icon={IoPlaySkipBackOutline}
           handler={handlePrevious}
+          tooltip="Previous"
         />
-        <ControlPanelButton Icon={HiOutlinePlayPause} handler={handlePause} />
+        <ControlPanelButton
+          Icon={HiOutlinePlayPause}
+          handler={handlePause}
+          tooltip="Pause / Play"
+        />
         <ControlPanelButton
           Icon={BsArrowsFullscreen}
           handler={handleFullscreen}
+          tooltip="Toggle Fullscreen"
         />
         <ControlPanelButton
           Icon={IoPlaySkipForwardOutline}
           handler={handleNext}
+          tooltip="Next"
         />
       </ul>
     );
   };
 
   return (
-    <div className={styles.PhotoGallery}>
+    <div>
       {isFullScreen ? (
         <div className={PhotoGalleryStyles.fullscreen_container} ref={ref}>
           <figure className={PhotoGalleryStyles.fullscreen_wrapper}>
             <img
+              loading="lazy"
               src={photos[currentPhotoIndex]}
               alt={alt}
               style={currentPhotoStyle}

@@ -22,6 +22,7 @@
 .projects_article > h2 {
   font-size: 4rem;
   margin: var(--margin-mini);
+  text-align: center;
 }
 .projects_article_container {
   display: flex;
@@ -108,4 +109,22 @@
   -webkit-filter: drop-shadow(0px 0px 15px #222);
   filter: drop-shadow(0px 0px 15px #222);
   transition: color 0.8s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .projects_article_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .projects_article_item {
+    max-width: 90%;
+  }
+  .project_photo_gallery {
+    width: 90%;
+  }
+  .projects_article > h2 {
+    font-size: 3.5rem;
+  }
 }

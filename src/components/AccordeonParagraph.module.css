@@ -12,6 +12,7 @@
   background-color: brown;
   position: relative;
   min-height: 50px;
+  cursor: pointer;
 }
 .svg {
   position: absolute;

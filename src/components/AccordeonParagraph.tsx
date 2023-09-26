@@ -39,10 +39,11 @@ const AccordeonParagraph = ({
         <animated.div
           style={{
             transform: rotation.x.to((value) => `rotate(${value}deg)`),
-            cursor: "pointer",
+
             userSelect: "none",
           }}
           className={styles.svg}
+          title={isOpened ? "Close" : "Open"}
         >
           {isOpened ? "-" : "+"}
         </animated.div>

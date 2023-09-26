@@ -8,29 +8,14 @@ import {
   DescriptionTarot,
 } from "../../../assets/Descriptions";
 
-import GooglePlayImage from "../../../assets/images/GooglePlayStore.png";
 import { landingPagePhotos } from "../../../assets/images/landingPage/landingPagePhotos";
 import { mobileProjectPhotos } from "../../../assets/images/mobileProject/mobileProjectPhotos";
 import { realEstateProjectPhotos } from "../../../assets/images/realEstateProject/realEstateProjectPhotos";
 import PhotoGallery from "./PhotoGallery";
 import AccordeonParagraph from "../../AccordeonParagraph";
 import MediaButton from "../../Buttons/MediaButton";
+import ButtonGooglePlayStore from "../../Buttons/ButtonGooglePlayStore";
 
-const ButtonGooglePlayStore = () => {
-  return (
-    <a
-      href="https://play.google.com/store/apps/details?id=com.mobiletarotandroid"
-      className={styles.google_play_store}
-    >
-      <img
-        src={GooglePlayImage}
-        alt="Get on Google Play"
-        height="80"
-        width="206.7"
-      ></img>
-    </a>
-  );
-};
 
 const MobileProjectTechnologicalStackArray = [
   <AccordeonParagraph

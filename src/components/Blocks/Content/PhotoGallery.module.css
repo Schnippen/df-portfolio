@@ -101,3 +101,11 @@
   margin: 16px 0;
   color: aliceblue;
 }
+
+
+@media (max-width: 1024px) {
+
+  .projects_article_item {
+    max-width: 90%;
+  }
+}
