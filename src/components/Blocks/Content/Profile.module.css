@@ -49,13 +49,25 @@
   justify-content: space-around;
 }
 
-
 .profile_description {
   grid-column: 1/2;
   background-color: #224a54;
   height: 100%;
   width: 100%;
   color: #f0f8ff;
+}
+@media (max-width: 800px) {
+  .profile_item {
+    flex-direction: column;
+    width: 100%;
+  }
+  .media_container {
+    margin: 32px 0 0 0;
+  }
+  .profile_paragraph_container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
 }
 
 @media (max-width: 425px) {

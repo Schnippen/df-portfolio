@@ -43,14 +43,17 @@
   .block_title {
     font-size: 140px;
   }
+  .block_container {
+    margin: 100px 16px;
+  }
 }
 
 @media (max-width: 768px) {
   .block_title {
     font-size: 120px;
-    
   }
 }
+
 @media (max-width: 600px) {
   .block_title {
     font-size: 80px;

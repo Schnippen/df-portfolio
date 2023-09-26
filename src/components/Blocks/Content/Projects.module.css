@@ -128,3 +128,10 @@
     font-size: 3.5rem;
   }
 }
+
+@media (max-width: 640px) {
+  .project_photo_gallery {
+    width: 100%;
+    min-width: 300px;
+  }
+}
