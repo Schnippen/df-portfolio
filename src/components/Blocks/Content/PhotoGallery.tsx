@@ -8,7 +8,6 @@ import {
 } from "react-icons/io5";
 import { BsArrowsFullscreen } from "react-icons/bs";
 import { IconType } from "react-icons";
-
 const PhotoGallery = ({
   photos,
   delay,

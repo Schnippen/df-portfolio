@@ -18,6 +18,7 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   cursor: pointer;
+  border-radius: 5px;
 }
 .control_panel_button:hover,
 .control_panel_button:hover > svg {
@@ -95,7 +96,6 @@
 }
 .index_display {
   font-size: 1.1rem;
-  min-height: 100px;
   line-height: 1.4;
   font-family: Montserrat;
   margin: 16px 0;

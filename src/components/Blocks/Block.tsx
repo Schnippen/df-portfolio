@@ -10,7 +10,9 @@ type BlockTypes = {
 function Block({ myRef, title, childComponent }: BlockTypes) {
   return (
     <section className={styles.block_container} ref={myRef}>
-      <h2 className={styles.block_title}>{title}</h2>
+      <div className={styles.block_title_container}>
+        <h2 className={styles.block_title}>{title}</h2>
+      </div>
       <article className={styles.block_article}>{childComponent}</article>
     </section>
   );

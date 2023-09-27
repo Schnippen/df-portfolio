@@ -7,6 +7,7 @@ const ButtonGooglePlayStore = () => {
       href="https://play.google.com/store/apps/details?id=com.mobiletarotandroid"
       className={styles.google_play_store}
       title="Tarot Reader Google Play Store"
+      style={{ userSelect: "none" }}
     >
       <img
         src={GooglePlayImage}

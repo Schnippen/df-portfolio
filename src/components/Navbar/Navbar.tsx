@@ -52,7 +52,7 @@ function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
           <div
             style={{
               opacity: isOpened ? "0" : "1",
-              transform: isOpened ? "translateX(20px)" : "translateX(0)",
+              transform: isOpened ? "translateX(-20px)" : "translateX(0)",
             }}
           ></div>
           <div
@@ -82,5 +82,3 @@ function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
 }
 
 export default Navbar;
-//        <li>          <div className={styles.overlay}>Darkmode?</div>        </li>
-//140px

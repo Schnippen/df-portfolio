@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 .profile_item {
-  background-color: antiquewhite;
+  background-color: var(--tertiary-color);
   height: 100%;
   min-height: 300px;
   justify-items: center;
@@ -79,6 +79,7 @@
   .profile_paragraph_container {
     min-width: unset;
     max-width: unset;
+    padding: 0 8px;
   }
 
   .profile_paragraph {

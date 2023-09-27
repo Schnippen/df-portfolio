@@ -54,3 +54,8 @@
     text-align: center;
   }
 }
+@media (max-width: 360px) {
+  .accordeon_title_container {
+    min-height: 120px;
+  }
+}

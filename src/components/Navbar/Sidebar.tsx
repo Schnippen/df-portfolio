@@ -41,7 +41,6 @@ function Sidebar({
       document.body.style.overflow = "auto";
     };
   }, [isOpened]);
-  //<div className={styles.logo}>{Logo}</div>
 
   return (
     <aside
@@ -53,6 +52,7 @@ function Sidebar({
         <li onClick={(event) => handleRef(event, meRef)}>
           <p className={styles.overlay}>About Me</p>
         </li>
+
         <li onClick={(event) => handleRef(event, projectsRef)}>
           <p className={styles.overlay}>Projects</p>
         </li>
