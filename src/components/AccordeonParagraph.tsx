@@ -15,20 +15,48 @@ const AccordeonParagraph = ({
     height: window.innerHeight,
   });
   const [height, setHeight] = useState(180);
-  console.log(dimensions);
   const handleResize = () => {
     setDimensions({
       width: window.innerWidth,
       height: window.innerHeight,
     });
   };
+
+  //set height of accordeon paragraph
   useEffect(() => {
     window.addEventListener("resize", handleResize, false);
-    if (768 >= height) {
+    if (dimensions.width > 768) {
+      setHeight(180);
+    }
+    if (1180 >= dimensions.width) {
+      setHeight(200);
+    }
+    if (dimensions.width >= 1160) {
+      setHeight(260);
+    }
+    if (dimensions.width >= 1110) {
+      setHeight(270);
+    }
+    if (dimensions.width >= 1040) {
+      setHeight(280);
+    }
+    if (dimensions.width >= 1024) {
       setHeight(240);
     }
-    if (578 >= height) {
+    if (768 >= dimensions.width) {
+      setHeight(240);
+    }
+    if (640 >= dimensions.width) {
+      setHeight(260);
+    }
+    if (578 >= dimensions.width) {
       setHeight(300);
+    }
+    if (425 >= dimensions.width) {
+      setHeight(340);
+    }
+    if (375 >= dimensions.width) {
+      setHeight(350);
     }
   }, []);
   //define animation
@@ -37,7 +65,7 @@ const AccordeonParagraph = ({
     from: { size: "0px", background: "hotpink", opacity: 0 },
     to: {
       size: isOpened ? `${height}` : "0px",
-      background: isOpened ? "white" : "blue",
+      //background: isOpened ? "white" : "blue",
       opacity: isOpened ? 1 : 0,
     },
   });

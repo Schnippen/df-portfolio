@@ -1,15 +1,15 @@
 .accordeon {
-  background-color: aqua;
+  background-color: #d6ccc2;
   display: flex;
   flex-direction: column;
   margin: 8px 0;
+  border-radius: 5px;
 }
 
 .accordeon_title_container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: brown;
   position: relative;
   min-height: 50px;
   cursor: pointer;
@@ -29,7 +29,6 @@
 }
 
 .accordeon_wrapper {
-  background-color: purple;
   width: 100%;
   min-height: 25px;
   overflow: hidden;
