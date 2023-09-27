@@ -53,19 +53,25 @@ const AccordeonParagraph = ({
       setHeight(300);
     }
     if (425 >= dimensions.width) {
-      setHeight(340);
+      setHeight(360);
     }
     if (375 >= dimensions.width) {
-      setHeight(350);
+      setHeight(370);
     }
   }, []);
   //define animation
   const { size, opacity, ...rest } = useSpring({
     config: config.slow,
-    from: { size: "0px", background: "hotpink", opacity: 0 },
+    from: {
+      size: "0px",
+      background: `rgb(245 235 224 /${0}%)`,
+      opacity: 0,
+    },
     to: {
       size: isOpened ? `${height}` : "0px",
-      //background: isOpened ? "white" : "blue",
+      background: isOpened
+        ? `rgb(245 235 224 /${100}%)`
+        : "rgb(255 255 255 / 0%)",
       opacity: isOpened ? 1 : 0,
     },
   });
