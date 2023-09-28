@@ -25,7 +25,11 @@ function Contact({ myRef, id }: ContactTypes) {
       });
     };
     return (
-      <form action="" className={styles.contact_form}>
+      <form
+        action="https://formsubmit.co/dfojcik35@gmail.com"
+        method="POST"
+        className={styles.contact_form}
+      >
         <div className={styles.contact_form_container}>
           <div className={styles.contact_form_input}>
             <span className={styles.contact_form_input_span}></span>
@@ -34,6 +38,7 @@ function Contact({ myRef, id }: ContactTypes) {
               id="email"
               name="email"
               onChange={handleChange}
+              required
             />
             <label className={styles.contact_form_input_label} htmlFor="email">
               E-mail
@@ -46,6 +51,7 @@ function Contact({ myRef, id }: ContactTypes) {
               id="subject"
               name="subject"
               onChange={handleChange}
+              required
             />
             <label
               className={styles.contact_form_input_label}
@@ -56,7 +62,7 @@ function Contact({ myRef, id }: ContactTypes) {
           </div>
           <div className={styles.contact_form_textarea}>
             <span className={styles.contact_form_textarea_span}></span>
-            <textarea id="message" name="message" onChange={handleChange} />
+            <textarea id="message" name="message" onChange={handleChange} required/>
             <label
               className={styles.contact_form_textarea_label}
               htmlFor="message"
@@ -66,13 +72,14 @@ function Contact({ myRef, id }: ContactTypes) {
           </div>
         </div>
         <div className={styles.button_container}>
-          <button
-            onClick={(e) => e.preventDefault()}
+          <input
+            type="submit"
+            name="submit"
+            value="Send"
+            onClick={(e) => alert("Email sent")}
             className={styles.button}
             title="Send an e-mail"
-          >
-            Send
-          </button>
+          />
         </div>
       </form>
     );
