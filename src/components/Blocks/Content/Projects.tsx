@@ -2,12 +2,6 @@ import React, { useState } from "react";
 import styles from "./Projects.module.css";
 import { BsGithub } from "react-icons/bs";
 import { HiOutlineExternalLink } from "react-icons/hi";
-import DevIcons from "../../../assets/DevIcons";
-import {
-  DescriptionAnytownRealEstate,
-  DescriptionTarot,
-} from "../../../assets/Descriptions";
-
 import { landingPagePhotos } from "../../../assets/images/landingPage/landingPagePhotos";
 import { mobileProjectPhotos } from "../../../assets/images/mobileProject/mobileProjectPhotos";
 import { realEstateProjectPhotos } from "../../../assets/images/realEstateProject/realEstateProjectPhotos";

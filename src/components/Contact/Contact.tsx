@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
-import Map from "../../assets/map";
-import { a } from "react-spring";
 
 type ContactTypes = {
   myRef: React.MutableRefObject<HTMLElement | null>;
+  mediaRef: React.MutableRefObject<HTMLElement | null>;
   id: string;
 };
 
@@ -67,7 +66,11 @@ function Contact({ myRef, id }: ContactTypes) {
           </div>
         </div>
         <div className={styles.button_container}>
-          <button onClick={(e) => e.preventDefault()} className={styles.button} title="Send an e-mail">
+          <button
+            onClick={(e) => e.preventDefault()}
+            className={styles.button}
+            title="Send an e-mail"
+          >
             Send
           </button>
         </div>

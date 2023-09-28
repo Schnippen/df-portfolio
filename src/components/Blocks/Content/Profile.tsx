@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Profile.module.css";
-import DevIcons from "../../../assets/DevIcons";
 import ProfilePicture from "../../../assets/images/profile_picture.png";
 import MediaButton from "../../Buttons/MediaButton";
 import { BsGithub, BsLinkedin } from "react-icons/bs";

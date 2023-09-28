@@ -26,7 +26,7 @@ function Main({ meRef, projectsRef, mediaRef, contactRef }: MainTypes) {
           title={"Projects"}
           childComponent={<Projects />}
         ></Block>
-        <Contact myRef={contactRef} id="Contact" />
+        <Contact myRef={contactRef} id="Contact" mediaRef={mediaRef} />
       </main>
     </>
   );
