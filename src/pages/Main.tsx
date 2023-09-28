@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Block from "../components/Blocks/Block";
 import Contact from "../components/Contact/Contact";
 import Profile from "../components/Blocks/Content/Profile";
 import Projects from "../components/Blocks/Content/Projects";
+import styles from "./Main.module.css";
 
 type MainTypes = {
   meRef: React.MutableRefObject<null>;
@@ -14,15 +15,7 @@ type MainTypes = {
 function Main({ meRef, projectsRef, mediaRef, contactRef }: MainTypes) {
   return (
     <>
-      <main
-        style={{
-          paddingTop: "120px",
-          backgroundColor: "f5f8fb",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+      <main className={styles.main}>
         <Block
           myRef={meRef}
           title={"About Me"}

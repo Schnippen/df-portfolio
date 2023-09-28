@@ -59,7 +59,6 @@
 
 .fullscreen_wrapper {
   min-height: 200px;
-
   height: 96%;
   min-width: 50%;
   max-width: 80%;
@@ -68,7 +67,6 @@
   align-items: center;
   flex-direction: column-reverse;
   user-select: none;
-  background-color: red;
 }
 .control_panel_container_fullscreen {
   z-index: 1000;
@@ -105,6 +103,9 @@
 @media (max-width: 1024px) {
   .projects_article_item {
     max-width: 90%;
+  }
+  .fullscreen_wrapper {
+    min-width: 80%;
   }
 }
 

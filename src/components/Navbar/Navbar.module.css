@@ -67,7 +67,7 @@ a {
 }
 
 .overlay::before {
-  background: var(--primary-text-color);
+  background: #b8a1e1;
   content: "";
   inset: 0;
   position: absolute;
