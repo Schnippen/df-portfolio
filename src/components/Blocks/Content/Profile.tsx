@@ -1,10 +1,9 @@
 import React from "react";
 import styles from "./Profile.module.css";
-import ProfilePicture from "../../../assets/images/profile_picture.png";
+import ProfilePicture from "../../../assets/images/profile_picture.webp";
 import MediaButton from "../../Buttons/MediaButton";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 function Profile() {
-
   const MediaContainer = () => {
     return (
       <div className={styles.media_container}>
@@ -66,4 +65,3 @@ function Profile() {
 }
 
 export default Profile;
-
