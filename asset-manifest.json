@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.74cc006f.css",
-    "main.js": "/static/js/main.6c351a72.js",
+    "main.js": "/static/js/main.fced4038.js",
     "static/js/496.405af00d.chunk.js": "/static/js/496.405af00d.chunk.js",
-    "static/media/profile_picture.png": "/static/media/profile_picture.4d57294c3f0a7dc931d6.png",
     "static/media/realestate (1).webp": "/static/media/realestate (1).9f87eff0ae28f5e57387.webp",
     "static/media/realestate (11).webp": "/static/media/realestate (11).9f87eff0ae28f5e57387.webp",
     "static/media/realestate (3).webp": "/static/media/realestate (3).9ca7708951c40ab47995.webp",
@@ -27,17 +26,18 @@
     "static/media/ScreenShot (10).webp": "/static/media/ScreenShot (10).95ddd715380221467a77.webp",
     "static/media/desktop_landing_page2_CROPPED.webp": "/static/media/desktop_landing_page2_CROPPED.2f54036d760352532d42.webp",
     "static/media/ScreenShot (4).webp": "/static/media/ScreenShot (4).93be221424cfc68e84e0.webp",
+    "static/media/profile_picture.webp": "/static/media/profile_picture.53683d8791cb289b51c6.webp",
     "static/media/ScreenShot (5).webp": "/static/media/ScreenShot (5).05780aaf58c71b6f9347.webp",
     "static/media/ScreenShot (3).webp": "/static/media/ScreenShot (3).e1fa73066d78d6dea7ec.webp",
     "static/media/ScreenShot (2).webp": "/static/media/ScreenShot (2).0b22772646706c515a0b.webp",
     "static/media/ScreenShot (1).webp": "/static/media/ScreenShot (1).c386763a7c9a6101fd4d.webp",
     "index.html": "/index.html",
     "main.74cc006f.css.map": "/static/css/main.74cc006f.css.map",
-    "main.6c351a72.js.map": "/static/js/main.6c351a72.js.map",
+    "main.fced4038.js.map": "/static/js/main.fced4038.js.map",
     "496.405af00d.chunk.js.map": "/static/js/496.405af00d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74cc006f.css",
-    "static/js/main.6c351a72.js"
+    "static/js/main.fced4038.js"
   ]
 }
