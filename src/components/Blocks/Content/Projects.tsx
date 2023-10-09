@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Projects.module.css";
 import { BsGithub } from "react-icons/bs";
 import { HiOutlineExternalLink } from "react-icons/hi";
