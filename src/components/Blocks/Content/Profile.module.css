@@ -87,4 +87,8 @@
     padding: 0 8px;
     text-align: left;
   }
+  .profile_picture {
+    height: 250px;
+    width: 250px;
+  }
 }
