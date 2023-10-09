@@ -23,7 +23,6 @@ const PhotoGallery = ({
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log("isPaused:", isPaused);
     const timer = setInterval(() => {
       if (!isPaused) {
         setIsFadingOut(true);
