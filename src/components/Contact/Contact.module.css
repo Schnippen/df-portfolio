@@ -261,6 +261,9 @@ a {
   .contact_form_container {
     padding: 24px 16px;
   }
+  .footer_title > h2 {
+    font-size: 86px;
+  }
 }
 /* //.contact_form_input > input {
   .contact_form_textarea > textarea {  padding: 48px; rgb(245 235 224 /${100}%)*/

@@ -60,6 +60,10 @@ const LandingPageTechnologicalStackArray = [
     title="Analytics Integration"
     paragraphText="The integration of analytics allows for quick data gathering and analysis, empowering me to make informed choices about the platform direction for my startup project."
   />,
+  <AccordeonParagraph
+    title="SEO"
+    paragraphText="Strategically incorporated Keywords, improved site speed, created an organized site structure"
+  />,
 ];
 const AnyTownTechnologicalStackArray = [
   <AccordeonParagraph
@@ -162,7 +166,7 @@ function Projects() {
           <div className={styles.project_photo_gallery}>
             <PhotoGallery
               photos={landingPagePhotos}
-              delay={3000 * 100}
+              delay={3000}
               alt={"Tarot Reader Ladning Page Screenshot"}
             />
           </div>
