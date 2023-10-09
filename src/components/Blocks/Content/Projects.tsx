@@ -87,7 +87,7 @@ const TechnologicalStackList = ({ array }: { array: React.JSX.Element[] }) => {
   return (
     <ul className={styles.project_list}>
       {array.map((item, index) => (
-        <div key={item.key}>{item}</div>
+        <div key={index}>{item}</div>
       ))}
     </ul>
   );
