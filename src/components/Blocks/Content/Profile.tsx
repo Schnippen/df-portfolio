@@ -12,7 +12,11 @@ function Profile() {
           Icon={BsGithub}
           tooltip="Github"
         />
-        <MediaButton link="_blank" Icon={BsLinkedin} tooltip="linkedin" />
+        <MediaButton
+          link="https://www.linkedin.com/in/damian-fojcik-483371218/"
+          Icon={BsLinkedin}
+          tooltip="linkedin"
+        />
       </div>
     );
   };
