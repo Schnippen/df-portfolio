@@ -53,6 +53,10 @@ const LandingPageTechnologicalStackArray = [
     paragraphText="Facing a pressing need for a landing page to promote my mobile application startup, I turned to React as the go-to solution for its rapid development. React's agility and efficiency allowed me to swiftly create a dynamic and responsive landing page."
   />,
   <AccordeonParagraph
+    title="Next.js"
+    paragraphText="When it came to building a high-performance web application, I turned to Next.js. Its seamless server-side rendering, routing, and dynamic loading capabilities made it the ideal choice for creating a lightning-fast and SEO-friendly web experience."
+  />,
+  <AccordeonParagraph
     title="Responsive Design with Media Queries"
     paragraphText="Knowing that most potential customers will get to the landing page via mobile applications, leveraging React, the landing page adapts to different screen sizes, delivering an optimal user experience on smartphones, tablets, or desktops."
   />,
