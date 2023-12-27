@@ -71,16 +71,17 @@ const LandingPageTechnologicalStackArray = [
 ];
 const AnyTownTechnologicalStackArray = [
   <AccordeonParagraph
-    title="React"
-    paragraphText="This project marked my first dive into React, where I got a hands-on introduction to creating custom components, using hooks, and exploring various other React features.."
+    title="React & Next.js"
+    paragraphText="This project marked my first dive into React and Next.js,  providing me with an immersive introduction to modern front-end development"
+  />,
+  <AccordeonParagraph
+    title="Supabase backend"
+    paragraphText="Exploring alternatives to Firebase I  discovered Supabase.
+    I gained practical experience working with Postgres database, Authentication, instant APIs."
   />,
   <AccordeonParagraph
     title="Responsive Design with Media Queries"
-    paragraphText="Knowing that most potential customers will get to the landing page via mobile applications, leveraging React, the landing page adapts to different screen sizes, delivering an optimal user experience on smartphones, tablets, or desktops."
-  />,
-  <AccordeonParagraph
-    title="Simple backend"
-    paragraphText="I gained practical experience working with a simple backend JSON server, where I focused on CRUD (Create, Read, Update, Delete) operations. This foundational knowledge later proved invaluable when I applied it to create a mobile app mentioned above."
+    paragraphText="Websitedynamically adjusts to diverse screen sizes, ensuring an optimal user experience ."
   />,
   <AccordeonParagraph
     title="Web scraping"
@@ -143,8 +144,9 @@ function Projects() {
         <div className={styles.projects_article_container}>
           <div className={styles.projects_article_item}>
             <p className={styles.project_paragraph}>
-              Landing page serves as a crucial component of my app's marketing
-              strategy, offering a compelling introduction to potential users.
+              Landing page and product blog serves as a crucial component of my
+              app's marketing strategy, offering a compelling introduction to
+              potential users.
               <Separator />
               What sets this landing page apart is its integration of analytics
               and platform preference analysis, helping me make data-driven
@@ -208,6 +210,11 @@ function Projects() {
                 link="https://github.com/Schnippen"
                 Icon={BsGithub}
                 tooltip="Github"
+              />
+              <MediaButton
+                link="estate-next.vercel.app"
+                Icon={HiOutlineExternalLink}
+                tooltip="Visit AnyTown Real Estate"
               />
             </div>
           </div>
