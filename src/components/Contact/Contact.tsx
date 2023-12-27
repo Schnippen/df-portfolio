@@ -62,7 +62,12 @@ function Contact({ myRef, id }: ContactTypes) {
           </div>
           <div className={styles.contact_form_textarea}>
             <span className={styles.contact_form_textarea_span}></span>
-            <textarea id="message" name="message" onChange={handleChange} required/>
+            <textarea
+              id="message"
+              name="message"
+              onChange={handleChange}
+              required
+            />
             <label
               className={styles.contact_form_textarea_label}
               htmlFor="message"
@@ -94,15 +99,31 @@ function Contact({ myRef, id }: ContactTypes) {
   };
 
   const SocialLinkArray = [
-    { title: "Github", tooltip: "Link to Github" },
-    { title: "Linked in", tooltip: "Link to Linked in" },
-    { title: "Airbnb", tooltip: "Link to Airbnb" },
+    {
+      title: "Github",
+      tooltip: "Link to Github",
+      href: "https://github.com/Schnippen",
+    },
+    {
+      title: "Linked in",
+      tooltip: "Link to Linked in",
+      href: "https://www.linkedin.com/in/damian-fojcik-483371218/",
+    },
+    /* { title: "Airbnb", tooltip: "Link to Airbnb" }, */
   ];
-  const SocialLink = ({ text, tooltip }: { text: string; tooltip: string }) => {
+  const SocialLink = ({
+    text,
+    tooltip,
+    href,
+  }: {
+    text: string;
+    tooltip: string;
+    href: string;
+  }) => {
     return (
       <li className={styles.socialLink} title={tooltip}>
         <a
-          href=""
+          href={href}
           target="_blank"
           //style
         >
@@ -125,6 +146,7 @@ function Contact({ myRef, id }: ContactTypes) {
                 key={index}
                 text={item.title}
                 tooltip={item.tooltip}
+                href={item.href}
               />
             ))}
           </div>
