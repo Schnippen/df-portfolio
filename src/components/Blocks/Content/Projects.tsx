@@ -28,11 +28,11 @@ const MobileProjectTechnologicalStackArray = [
   />,
   <AccordeonParagraph
     title="Firestore NoSQL Database"
-    paragraphText="Firestore's flexible pricing model aligns with project's growth, ensuring cost-effectiveness as scale. It makes cross-platform development seamless. The freedom to store both structured and unstructured data offers flexibility, during dynamic early development stages."
+    paragraphText="If I were starting the same project over again I would start with the supabase environment."
   />,
   <AccordeonParagraph
     title="Firebase Authorization"
-    paragraphText="Firebase Authentication streamlines user registration and login, offering various authentication methods, including email/password and social media logins, simplifying the onboarding process."
+    paragraphText="Firebase Authentication streamlines user registration and login, offering various authentication methods, including email/password and social media logins, simplifying the onboarding process. Nevertheless, supabase is a better option for user authentication in react native"
   />,
   <AccordeonParagraph
     title="Advanced Error Detection"
