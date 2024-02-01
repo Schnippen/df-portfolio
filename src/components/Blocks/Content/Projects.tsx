@@ -46,6 +46,10 @@ const MobileProjectTechnologicalStackArray = [
     title="Revenue Cat Monetization"
     paragraphText="Successfully monetized in-app products with in app using RevenueCat which provides a  backend and wrapper around Apple's StoreKit, Google Play Billing, and web-based payments."
   />,
+  <AccordeonParagraph
+    title="iOS version"
+    paragraphText="App has been submitted for review."
+  />,
 ];
 const LandingPageTechnologicalStackArray = [
   <AccordeonParagraph
