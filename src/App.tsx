@@ -1,18 +1,17 @@
 //import logo from "./logo.svg";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Main from "./pages/Main";
-import { Route, Routes } from "react-router";
 
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const meRef = useRef(null);
   const projectsRef = useRef(null);
   const mediaRef = useRef(null);
   const contactRef = useRef(null);
-  const [locationState, setLocationState] = useState("");
+  //const [locationState, setLocationState] = useState("");
   const navigate = useNavigate();
 
   const handleRef = (
@@ -29,6 +28,12 @@ function App() {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+  console.log(
+    `
+%c👀 I know what you're doing here... 🕵️‍♂️
+`,
+    "color: red; font-size: 16px; font-weight: bold; background: black; padding: 5px; border-radius: 3px;"
+  );
 
   /*   const location = useLocation();
 

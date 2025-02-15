@@ -1,57 +1,15 @@
-import React from "react";
-import styles from "./Projects.module.css";
+import React, { useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { landingPagePhotos } from "../../../assets/images/landingPage/landingPagePhotos";
-import { mobileProjectPhotos } from "../../../assets/images/mobileProject/mobileProjectPhotos";
 import { realEstateProjectPhotos } from "../../../assets/images/realEstateProject/realEstateProjectPhotos";
 import PhotoGallery from "./PhotoGallery";
-import AccordeonParagraph from "../../AccordeonParagraph";
 import MediaButton from "../../Buttons/MediaButton";
-import ButtonGooglePlayStore from "../../Buttons/ButtonGooglePlayStore";
 import Separator from "../../Separator";
-
-const MobileProjectTechnologicalStackArray = [
-  <AccordeonParagraph
-    title="React Native"
-    paragraphText="The app is built using React Native, ensuring
-                  cross-platform compatibility and a smooth user experience on
-                  both Android and iOS devices."
-  />,
-  <AccordeonParagraph
-    title="React Native Navigation"
-    paragraphText="In the early stages of making the app, I didn't know exactly how big it would become or how many features it would have. I choosed this library because of its long-term scalability, commmunitty support and customization"
-  />,
-  <AccordeonParagraph
-    title="Mobx State Management"
-    paragraphText="I needed a flexible solution for global state management. Due to the startup roots of this project, I encountered many concept changes during development. Because it requires less boilerplate, I could adapt to the changes rapidly."
-  />,
-  <AccordeonParagraph
-    title="Firestore NoSQL Database"
-    paragraphText="If I were starting the same project over again I would start with the supabase environment."
-  />,
-  <AccordeonParagraph
-    title="Firebase Authorization"
-    paragraphText="Firebase Authentication streamlines user registration and login, offering various authentication methods, including email/password and social media logins, simplifying the onboarding process. Nevertheless, supabase is a better option for user authentication in react native"
-  />,
-  <AccordeonParagraph
-    title="Advanced Error Detection"
-    paragraphText="Sentry provides real-time error tracking and reporting. It captures errors, exceptions, and crashes that occur in your application and sends detailed error reports to the Sentry platform."
-  />,
-  <AccordeonParagraph
-    title="Mixpanel for User Analytics"
-    paragraphText="By monitoring events such as sign-ups, feature usage, and conversions, user analytics helps businesses understand how customers engage with their offerings, empowering data-driven decision-making."
-  />,
-  <AccordeonParagraph
-    title="Revenue Cat Monetization"
-    paragraphText="Successfully monetized in-app products with in app using RevenueCat which provides a  backend and wrapper around Apple's StoreKit, Google Play Billing, and web-based payments."
-  />,
-  <AccordeonParagraph
-    title="iOS version"
-    paragraphText="App has been submitted for review."
-  />,
-];
-const LandingPageTechnologicalStackArray = [
+import MobileTarotProject from "./Projects/MobileTarotProject";
+import styles from "./Projects.module.css";
+import { RiichiMahjongProject } from "./Projects/RiichiMahjongProject";
+/* const LandingPageTechnologicalStackArray = [
   <AccordeonParagraph
     title="React"
     paragraphText="Facing a pressing need for a landing page to promote my mobile application startup, I turned to React as the go-to solution for its rapid development. React's agility and efficiency allowed me to swiftly create a dynamic and responsive landing page."
@@ -91,58 +49,13 @@ const AnyTownTechnologicalStackArray = [
     title="Web scraping"
     paragraphText="To fill the platform with property listings, I used web scraping techniques with Puppeteer andset up cron jobs to automate the data scraping process, keeping our property listings current and accurate."
   />,
-];
-const TechnologicalStackList = ({ array }: { array: React.JSX.Element[] }) => {
-  return (
-    <ul className={styles.project_list}>
-      {array.map((item, index) => (
-        <div key={index}>{item}</div>
-      ))}
-    </ul>
-  );
-};
+]; */
 
 function Projects() {
   return (
     <section className={styles.projects_container}>
-      <article className={styles.projects_article}>
-        <h2>Tarot Reader</h2>
-        <div className={styles.projects_article_container}>
-          <div className={styles.project_photo_gallery}>
-            <PhotoGallery
-              photos={mobileProjectPhotos}
-              delay={3000}
-              alt={"Screenshot of Tarot Reader App"}
-            />
-          </div>
-          <div className={styles.projects_article_item}>
-            <h3 className={styles.project_paragraph_title}>
-              Project Overview:
-            </h3>
-            <p className={styles.project_paragraph}>
-              This unique app offers personalized tarot readings, catering to
-              users specific questions.
-              <Separator />
-              The core functionality revolves around delivering customized tarot
-              insights to users, making their spiritual journey more accessible
-              and engaging.
-              <Separator />
-              During developement of Tarot Reader mobile app, I took on various
-              roles to bring this project to life, enhancing my my skills in
-              programming, monetization, and marketing.
-            </p>
-            <h3 className={styles.project_paragraph_title}>
-              Technological Stack:
-            </h3>
-            <TechnologicalStackList
-              array={MobileProjectTechnologicalStackArray}
-            />
-            <div className={styles.projects_article_links}>
-              <ButtonGooglePlayStore />
-            </div>
-          </div>
-        </div>
-      </article>
+      <RiichiMahjongProject />
+      <MobileTarotProject />
       <article className={styles.projects_article}>
         <h2>Tarot Reader Landing Page</h2>
         <div className={styles.projects_article_container}>
@@ -162,9 +75,9 @@ function Projects() {
               programming, monetization, and marketing.
             </p>
             <h3 className={styles.project_paragraph_title}>Core ideas:</h3>
-            <TechnologicalStackList
+            {/* <TechnologicalStackList
               array={LandingPageTechnologicalStackArray}
-            />
+            /> */}
             <div className={styles.projects_article_links}>
               <MediaButton
                 link="www.tarotreader.app"
@@ -208,7 +121,7 @@ function Projects() {
               techniques to collect information from these real estate portals.
             </p>
             <h3 className={styles.project_paragraph_title}>Core ideas:</h3>
-            <TechnologicalStackList array={AnyTownTechnologicalStackArray} />
+            {/* <TechnologicalStackList array={AnyTownTechnologicalStackArray} /> */}
             <div className={styles.projects_article_links}>
               <MediaButton
                 link="https://github.com/Schnippen"

@@ -2,14 +2,21 @@ import React, { useEffect, useState } from "react";
 import { animated, useSpring, config } from "react-spring";
 import styles from "./AccordeonParagraph.module.css";
 
-const AccordeonParagraph = ({
-  paragraphText,
-  title,
-}: {
+export interface AccordeonParagraphProps {
   paragraphText: string;
   title: string;
-}) => {
-  const [isOpened, setIsOpened] = useState<boolean>(false);
+  index: number;
+  isOpened: boolean;
+  onToggle: () => void;
+}
+
+export const AccordeonParagraph = ({
+  paragraphText,
+  title,
+  index,
+  isOpened,
+  onToggle,
+}: AccordeonParagraphProps) => {
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -85,7 +92,7 @@ const AccordeonParagraph = ({
       <div
         className={styles.accordeon_title_container}
         onClick={() => {
-          setIsOpened(!isOpened);
+          onToggle();
         }}
       >
         <h4 className={styles.accordeon_title}>{title}</h4>
@@ -122,7 +129,3 @@ const AccordeonParagraph = ({
     </li>
   );
 };
-
-export default AccordeonParagraph;
-
-//className={styles.accordeon_wrapper}

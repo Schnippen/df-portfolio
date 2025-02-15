@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 
 import Sidebar from "./Sidebar";
-import { Link } from "react-router-dom";
 
 type NavbarTypes = {
   handleRef: (

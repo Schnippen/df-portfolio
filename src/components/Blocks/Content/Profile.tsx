@@ -58,7 +58,7 @@ function Profile() {
         <section className={styles.profile_picture_container}>
           <img
             src={ProfilePicture}
-            alt="Profile Picture"
+            alt="myself"
             className={styles.profile_picture}
           />
           <MediaContainer />
