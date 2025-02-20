@@ -13,7 +13,11 @@ const TarotLandingPage = () => {
       <h2>Tarot Reader Landing Page</h2>
       <div className={styles.projects_article_container}>
         <div className={styles.projects_article_item}>
-          <p className={styles.project_paragraph}>
+          <p
+            className={
+              (styles.project_paragraph, styles.project_paragraph_addendum)
+            }
+          >
             While developing the Tarot Reader mobile app, I took on various
             roles to bring the project to life, enhancing my skills in
             programming, monetization, and marketing.

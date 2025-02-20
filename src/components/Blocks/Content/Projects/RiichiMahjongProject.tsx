@@ -11,7 +11,11 @@ export const RiichiMahjongProject = () => {
       <h2>Riichi Mahjong in React Native</h2>
       <div className={styles.projects_article_container}>
         <div className={styles.projects_article_item}>
-          <p className={styles.project_paragraph}>
+          <p
+            className={
+              (styles.project_paragraph, styles.project_paragraph_addendum)
+            }
+          >
             Born from late nights and a passion for programming, this project
             evolved from a hobby into something more.
             <Separator />

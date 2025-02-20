@@ -67,7 +67,7 @@ export const AccordeonParagraph = ({
     if (375 >= dimensions.width) {
       setHeight(370);
     }
-  }, []);
+  }, [dimensions.width]);
   //define animation
   const { size, opacity, ...rest } = useSpring({
     config: config.slow,
@@ -122,8 +122,16 @@ export const AccordeonParagraph = ({
       >
         {isOpened ? (
           <animated.p
-            style={{ opacity: opacity }}
-            className={styles.project_paragraph}
+            style={{
+              opacity: opacity,
+              textAlign: "justify",
+              fontWeight: 600,
+              fontSize: "1.1rem",
+              minHeight: "100px",
+              lineHeight: 1.4,
+              fontFamily: "Montserrat",
+              margin: "16px 0",
+            }}
           >
             {paragraphText}
           </animated.p>

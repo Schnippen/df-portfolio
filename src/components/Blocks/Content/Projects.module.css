@@ -73,7 +73,15 @@
   font-family: Montserrat;
   margin: 16px 0;
 }
-
+.project_paragraph_addendum {
+  text-align: justify;
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-height: 100px;
+  line-height: 1.4;
+  font-family: Montserrat;
+  margin: 16px 0;
+}
 .project_list {
   width: 100%;
 }

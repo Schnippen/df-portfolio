@@ -33,7 +33,11 @@ const MobileTarotProject = () => {
         </div>
         <div className={styles.projects_article_item}>
           <h3 className={styles.project_paragraph_title}>Project Overview:</h3>
-          <p className={styles.project_paragraph}>
+          <p
+            className={
+              (styles.project_paragraph, styles.project_paragraph_addendum)
+            }
+          >
             Riding the wave of excitement around the newly available chatGPT
             API, I decided to create this app as a fun project.
             <Separator />
@@ -57,7 +61,7 @@ const MobileTarotProject = () => {
           <TechnologicalStackList
             array={MobileTarotProjectTechnologicalStackArray}
           />
-          <p className={styles.project_paragraph}>
+          <p className={styles.project_paragraph_addendum}>
             Sadly, thanks to Google’s brilliant idea of turning home addresses
             into public info, my app has mysteriously vanished from the Play
             Store—who could’ve seen that coming?

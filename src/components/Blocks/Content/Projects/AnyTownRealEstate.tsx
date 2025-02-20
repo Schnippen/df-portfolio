@@ -21,7 +21,11 @@ const AnyTownRealEstate = () => {
           />
         </div>
         <div className={styles.projects_article_item}>
-          <p className={styles.project_paragraph}>
+          <p
+            className={
+              (styles.project_paragraph, styles.project_paragraph_addendum)
+            }
+          >
             Any Town Real Estate was my first side project and introduction to
             both frontend and a bit of backend development.
             <Separator />
