@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { animated, useSpring, config } from "react-spring";
 import styles from "./AccordeonParagraph.module.css";
+import { analytics } from "../utils/analytics";
+import { AnalyticsEvent } from "../utils/constans";
 
 export interface AccordeonParagraphProps {
   paragraphText: string;
@@ -93,6 +95,7 @@ export const AccordeonParagraph = ({
         className={styles.accordeon_title_container}
         onClick={() => {
           onToggle();
+          analytics.event(AnalyticsEvent.accordeon_click, { type: title });
         }}
       >
         <h4 className={styles.accordeon_title}>{title}</h4>

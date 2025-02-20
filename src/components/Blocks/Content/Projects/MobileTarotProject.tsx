@@ -6,18 +6,30 @@ import { mobileProjectPhotos } from "../../../../assets/images/mobileProject/mob
 import PhotoGallery from "../PhotoGallery";
 import { TechnologicalStackList } from "../TechStack/TechnologicalStackList";
 import { MobileTarotProjectTechnologicalStackArray } from "../TechStack/TechnologicalStackArray";
+import ReactPlayerComponent from "../ReactPlayerComponent";
 
 const MobileTarotProject = () => {
   return (
     <article className={styles.projects_article}>
       <h2>Tarot Reader</h2>
       <div className={styles.projects_article_container}>
-        <div className={styles.project_photo_gallery}>
-          <PhotoGallery
-            photos={mobileProjectPhotos}
-            delay={4000}
-            alt={"Screenshot of Tarot Reader App"}
-          />
+        <div style={{ flexDirection: "column" }}>
+          <div className={styles.project_photo_gallery}>
+            <PhotoGallery
+              photos={mobileProjectPhotos}
+              delay={4000}
+              alt={"Screenshot of Tarot Reader App"}
+            />
+          </div>
+          <div
+            className={styles.project_youtube_container}
+            style={{ marginTop: "10%", marginBottom: "48px" }}
+          >
+            <ReactPlayerComponent
+              urlYoutube="https://www.youtube.com/watch?v=u4dzeGxwvCg"
+              urlName="tarot"
+            />
+          </div>
         </div>
         <div className={styles.projects_article_item}>
           <h3 className={styles.project_paragraph_title}>Project Overview:</h3>
@@ -35,6 +47,9 @@ const MobileTarotProject = () => {
             everything—from coding to design to managing the project. Along the
             way, I learned a lot about programming, monetization, and marketing,
             turning a small idea into a real, working app.
+            <Separator />
+            I'd be happy to share how I would approach building it again or what
+            I would do differently with the knowledge I have now.
           </p>
           <h3 className={styles.project_paragraph_title}>
             Technological Stack:
@@ -42,6 +57,11 @@ const MobileTarotProject = () => {
           <TechnologicalStackList
             array={MobileTarotProjectTechnologicalStackArray}
           />
+          <p className={styles.project_paragraph}>
+            Sadly, thanks to Google’s brilliant idea of turning home addresses
+            into public info, my app has mysteriously vanished from the Play
+            Store—who could’ve seen that coming?
+          </p>
           <div className={styles.projects_article_links}>
             <ButtonGooglePlayStore />
           </div>

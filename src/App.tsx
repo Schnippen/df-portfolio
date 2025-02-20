@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar/Navbar";
 import Main from "./pages/Main";
 
 import { useNavigate } from "react-router-dom";
+import { useMixpanel } from "./utils/useMixpanel";
+import { analytics } from "./utils/analytics";
+import { AnalyticsEvent } from "./utils/constans";
 
 function App() {
   const meRef = useRef(null);
@@ -13,6 +16,7 @@ function App() {
   const contactRef = useRef(null);
   //const [locationState, setLocationState] = useState("");
   const navigate = useNavigate();
+  useMixpanel();
 
   const handleRef = (
     event: React.MouseEvent,
@@ -23,6 +27,7 @@ function App() {
     event.preventDefault();
     if (path) {
       navigate(path);
+      analytics.event(AnalyticsEvent.navbar_click, { type: "path" });
     }
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });

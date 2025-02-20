@@ -8,6 +8,8 @@ import {
 } from "react-icons/io5";
 import { BsArrowsFullscreen } from "react-icons/bs";
 import { IconType } from "react-icons";
+import { analytics } from "../../../utils/analytics";
+import { AnalyticsEvent } from "../../../utils/constans";
 const PhotoGallery = ({
   photos,
   delay,
@@ -40,9 +42,10 @@ const PhotoGallery = ({
   }, [photos.length, delay, isPaused]);
 
   useEffect(() => {
-    setTimeout(() => {
+    let timer = setTimeout(() => {
       setIsFadingOut(false);
     }, 500);
+    clearTimeout(timer);
   }, [currentPhotoIndex]);
 
   const currentPhotoStyle = {
@@ -60,6 +63,7 @@ const PhotoGallery = ({
         (prevIndex) => (prevIndex - 1 + photos.length) % photos.length
       );
     }, 300);
+    analytics.event(AnalyticsEvent.photoGallery_click, { type: "previous" });
   };
 
   const handleNext = () => {
@@ -70,15 +74,24 @@ const PhotoGallery = ({
     setTimeout(() => {
       setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
     }, 300);
+    analytics.event(AnalyticsEvent.photoGallery_click, {
+      type: "next",
+    });
   };
 
   const handlePause = () => {
     setIsPaused(!isPaused);
+    analytics.event(AnalyticsEvent.photoGallery_click, {
+      type: "pause",
+    });
   };
 
   const handleFullscreen = () => {
     console.log("isFullscreen", isFullScreen);
     setIsFullScreen(!isFullScreen);
+    analytics.event(AnalyticsEvent.photoGallery_click, {
+      type: "fullscren",
+    });
   };
   //prevent scrolling while in fullscreen
   useEffect(() => {
@@ -94,6 +107,9 @@ const PhotoGallery = ({
     const handleClose = (e: MouseEvent) => {
       if (isFullScreen && ref.current === e.target) {
         setIsFullScreen(!isFullScreen);
+        analytics.event(AnalyticsEvent.photoGallery_click, {
+          type: "close_fullscreen",
+        });
       }
     };
     if (isFullScreen) {

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
+import { analytics } from "../../utils/analytics";
+import { AnalyticsEvent } from "../../utils/constans";
 
 type ContactTypes = {
   myRef: React.MutableRefObject<HTMLElement | null>;
@@ -109,7 +111,11 @@ function Contact({ myRef, id }: ContactTypes) {
       tooltip: "Link to Linked in",
       href: "https://www.linkedin.com/in/damian-fojcik-483371218/",
     },
-    /* { title: "Airbnb", tooltip: "Link to Airbnb" }, */
+    {
+      title: "Airbnb",
+      tooltip: "Link to Airbnb",
+      href: "https://www.airbnb.com/users/show/296076814?locale=en",
+    },
   ];
   const SocialLink = ({
     text,
@@ -126,6 +132,9 @@ function Contact({ myRef, id }: ContactTypes) {
           href={href}
           target="_blank"
           //style
+          onClick={() =>
+            analytics.event(AnalyticsEvent.social_click, { type: tooltip })
+          }
         >
           {text}
         </a>

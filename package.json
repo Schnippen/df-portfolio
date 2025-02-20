@@ -4,6 +4,7 @@
   "homepage": "https://www.damianfojcik.com/",
   "private": true,
   "dependencies": {
+    "mixpanel-browser": "^2.60.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
@@ -40,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@types/mixpanel-browser": "^2.51.0",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
     "@types/react-slick": "^0.23.10",
