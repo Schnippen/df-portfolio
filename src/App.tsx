@@ -1,4 +1,3 @@
-//import logo from "./logo.svg";
 import React, { useRef } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";

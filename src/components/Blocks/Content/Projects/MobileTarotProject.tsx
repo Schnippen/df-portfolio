@@ -62,13 +62,15 @@ const MobileTarotProject = () => {
             array={MobileTarotProjectTechnologicalStackArray}
           />
           <p className={styles.project_paragraph_addendum}>
-            Sadly, thanks to Google’s brilliant idea of turning home addresses
-            into public info, my app has mysteriously vanished from the Play
-            Store—who could’ve seen that coming?
+            Sadly, thanks to the Digital Services Act (DSA), Google decided to
+            remove apps where developers didn’t publicly list their home
+            address. Since I wasn’t too keen on sharing mine with the world, my
+            app mysteriously vanished from the Play Store—who could’ve seen that
+            coming?
           </p>
-          <div className={styles.projects_article_links}>
+          {/*      <div className={styles.projects_article_links}>
             <ButtonGooglePlayStore />
-          </div>
+          </div> */}
         </div>
       </div>
     </article>

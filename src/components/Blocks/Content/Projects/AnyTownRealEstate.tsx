@@ -40,12 +40,12 @@ const AnyTownRealEstate = () => {
           <TechnologicalStackList array={AnyTownTechnologicalStackArray} />
           <div className={styles.projects_article_links}>
             <MediaButton
-              link="https://github.com/Schnippen"
+              link="https://github.com/Schnippen/estate-next"
               Icon={BsGithub}
               tooltip="Github"
             />
             <MediaButton
-              link="estate-next.vercel.app"
+              link="https://estate-next.vercel.app/"
               Icon={HiOutlineExternalLink}
               tooltip="Visit AnyTown Real Estate"
             />
