@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import { analytics } from "../../utils/analytics";
 import { AnalyticsEvent } from "../../utils/constans";
+import { IconType } from "react-icons";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { FaAirbnb } from "react-icons/fa";
 
 type ContactTypes = {
   myRef: React.MutableRefObject<HTMLElement | null>;
@@ -137,29 +140,35 @@ function Contact({ myRef, id }: ContactTypes) {
       title: "Github",
       tooltip: "Link to Github",
       href: "https://github.com/Schnippen",
+      Icon: BsGithub,
     },
     {
       title: "Linked in",
       tooltip: "Link to Linked in",
       href: "https://www.linkedin.com/in/damian-fojcik-483371218/",
+      Icon: BsLinkedin,
     },
     {
       title: "Airbnb",
       tooltip: "Link to Airbnb",
       href: "https://www.airbnb.com/users/show/296076814?locale=en",
+      Icon: FaAirbnb,
     },
   ];
   const SocialLink = ({
     text,
     tooltip,
     href,
+    Icon,
   }: {
     text: string;
     tooltip: string;
     href: string;
+    Icon: IconType;
   }) => {
     return (
       <li className={styles.socialLink} title={tooltip}>
+        <Icon className={styles.icon_small} />
         <a
           href={href}
           target="_blank"
@@ -169,6 +178,7 @@ function Contact({ myRef, id }: ContactTypes) {
             analytics.event(AnalyticsEvent.social_click, { type: tooltip })
           }
         >
+          {" "}
           {text}
         </a>
       </li>
@@ -176,24 +186,27 @@ function Contact({ myRef, id }: ContactTypes) {
   };
 
   return (
-    <footer className={styles.footer} ref={myRef} id={id}>
-      <FooterHeader />
-      <section className={styles.contact_container}>
-        <Form />
-        <div className={styles.contact_media}>
-          <div className={styles.media_container}>
-            <h3>Social:</h3>
-            {SocialLinkArray.map((item, index) => (
-              <SocialLink
-                key={index}
-                text={item.title}
-                tooltip={item.tooltip}
-                href={item.href}
-              />
-            ))}
+    <footer className={styles.footer_container} ref={myRef} id={id}>
+      <div className={styles.footer}>
+        <FooterHeader />
+        <section className={styles.contact_container}>
+          <Form />
+          <div className={styles.contact_media}>
+            <div className={styles.media_container}>
+              <h3>Social:</h3>
+              {SocialLinkArray.map((item, index) => (
+                <SocialLink
+                  key={index}
+                  text={item.title}
+                  tooltip={item.tooltip}
+                  href={item.href}
+                  Icon={item.Icon}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </footer>
   );
 }
