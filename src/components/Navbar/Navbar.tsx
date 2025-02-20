@@ -17,7 +17,7 @@ type NavbarTypes = {
 };
 
 function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
-  const [isOpened, setIsOpened] = useState<boolean>(true);
+  const [isOpened, setIsOpened] = useState<boolean>(false);
 
   const Logo = () => {
     return (
