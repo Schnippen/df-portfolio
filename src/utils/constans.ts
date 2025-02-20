@@ -7,4 +7,5 @@ export enum AnalyticsEvent {
   youtube_play = "youtube_play",
   playStore_click = "playStore_click",
   social_click = "social_click",
+  mail_click = "mail_click",
 }

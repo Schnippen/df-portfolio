@@ -17,26 +17,59 @@ function Contact({ myRef, id }: ContactTypes) {
       message: "",
     });
 
+    const validateEmail = (email: string): boolean => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+
+      if (!validateEmail(form.email)) {
+        alert("Please enter a valid email address");
+        return;
+      }
+
+      if (!form.subject.trim()) {
+        alert("Please enter a subject");
+        return;
+      }
+
+      if (!form.message.trim()) {
+        alert("Please enter a message");
+        return;
+      }
+      alert("Email sent successfully!");
+      analytics.event(AnalyticsEvent.mail_click, {
+        email: form.email,
+        text: form.message,
+        subject: form.subject,
+      });
+      (e.target as HTMLFormElement).submit();
+    };
+
     const handleChange = (
       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
+      const { name, value } = e.target;
       setForm({
         ...form,
-        [(e.target as HTMLInputElement).name]: (e.target as HTMLInputElement)
-          .value,
+        [name]: value,
       });
     };
+
     return (
       <form
         action="https://formsubmit.co/dfojcik35@gmail.com"
         method="POST"
         className={styles.contact_form}
+        onSubmit={handleSubmit}
       >
         <div className={styles.contact_form_container}>
           <div className={styles.contact_form_input}>
             <span className={styles.contact_form_input_span}></span>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
               onChange={handleChange}
@@ -79,14 +112,13 @@ function Contact({ myRef, id }: ContactTypes) {
           </div>
         </div>
         <div className={styles.button_container}>
-          <input
+          <button
             type="submit"
-            name="submit"
-            value="Send"
-            onClick={(e) => alert("Email sent")}
             className={styles.button}
             title="Send an e-mail"
-          />
+          >
+            Send
+          </button>
         </div>
       </form>
     );
@@ -132,6 +164,7 @@ function Contact({ myRef, id }: ContactTypes) {
           href={href}
           target="_blank"
           //style
+          rel="noreferrer"
           onClick={() =>
             analytics.event(AnalyticsEvent.social_click, { type: tooltip })
           }
