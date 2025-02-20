@@ -33,7 +33,7 @@ function Sidebar({
     return () => {
       document.removeEventListener("click", handleClose);
     };
-  }, [isOpened]);
+  }, [isOpened, setIsOpened]);
   useEffect(() => {
     document.body.style.overflow = isOpened ? "hidden" : "auto";
 

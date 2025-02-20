@@ -64,6 +64,7 @@
 .project_paragraph_title {
   font-size: 1.8rem;
   margin: 8px 0;
+  text-align: justify;
 }
 
 .project_paragraph {
@@ -129,9 +130,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 48px;
   }
   .projects_article_item {
     max-width: 90%;
+    margin-bottom: 24px;
   }
   .project_photo_gallery {
     width: 90%;

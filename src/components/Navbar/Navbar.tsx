@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 
 import Sidebar from "./Sidebar";
+import { analytics } from "../../utils/analytics";
+import { AnalyticsEvent } from "../../utils/constans";
 
 type NavbarTypes = {
   handleRef: (
@@ -15,7 +17,7 @@ type NavbarTypes = {
 };
 
 function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
-  const [isOpened, setIsOpened] = useState<boolean>(false);
+  const [isOpened, setIsOpened] = useState<boolean>(true);
 
   const Logo = () => {
     return (
@@ -42,7 +44,11 @@ function Navbar({ handleRef, meRef, projectsRef, contactRef }: NavbarTypes) {
       />
       <nav className={styles.navbar}>
         <div
-          onClick={() => setIsOpened(!isOpened)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsOpened(!isOpened);
+            analytics.event(AnalyticsEvent.hamburger_click);
+          }}
           className={styles.Hamburger}
         >
           <div

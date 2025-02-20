@@ -8,4 +8,5 @@ export enum AnalyticsEvent {
   playStore_click = "playStore_click",
   social_click = "social_click",
   mail_click = "mail_click",
+  hamburger_click = "hamburger_click",
 }
