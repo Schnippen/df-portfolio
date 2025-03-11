@@ -28,6 +28,7 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+  padding:0 16px;
 }
 .project_photo_gallery {
   display: flex;

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../Projects.module.css";
-import ButtonGooglePlayStore from "../../../Buttons/ButtonGooglePlayStore";
 import Separator from "../../../Separator";
 import { mobileProjectPhotos } from "../../../../assets/images/mobileProject/mobileProjectPhotos";
 import PhotoGallery from "../PhotoGallery";
@@ -68,9 +67,6 @@ const MobileTarotProject = () => {
             app mysteriously vanished from the Play Store—who could’ve seen that
             coming?
           </p>
-          {/*      <div className={styles.projects_article_links}>
-            <ButtonGooglePlayStore />
-          </div> */}
         </div>
       </div>
     </article>
